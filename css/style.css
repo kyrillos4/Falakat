@@ -1,0 +1,152 @@
+/********************Start Header Style******************/
+.Header {
+  background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bg.webp");
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  /*upper Nav*/
+}
+
+.Header .upperNav {
+  padding: 20px 0;
+}
+
+.Header .upperNav .login img {
+  margin: 0 10px;
+}
+
+.Header .upperNav .login button {
+  background: none;
+  padding: 5px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  color: rgba(0, 0, 0, 0.6) !important;
+  text-transform: uppercase;
+}
+
+.Header .Title span {
+  font-size: .75rem;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.Header .Title h1 {
+  margin: 25px 0;
+}
+
+.Header .Title button {
+  padding: 5px 30px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.Header .Title button:hover {
+  background: #797777;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/*********************End Header Style*******************/
+/*********************Start Carousel Style*******************/
+.carousel {
+  padding: 50px 0;
+}
+
+.carousel .title {
+  margin: 30px 0;
+}
+
+.carousel .owl-carousel {
+  position: relative;
+}
+
+.carousel .owl-carousel .item .inner {
+  text-align: center;
+  background: #eff3f5;
+  height: 300px;
+  padding: 0 20px;
+  border-radius: 5px;
+  width: 230px;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.carousel .owl-carousel .item .inner:hover {
+  background: #2eb3b7;
+  color: #fff;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.carousel .owl-carousel .item .inner:hover button {
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  background-color: #fff;
+  color: #2eb3b7;
+}
+
+.carousel .owl-carousel .item .inner img {
+  width: 80px;
+  margin: 20px 0;
+}
+
+.carousel .owl-carousel .item .inner button {
+  padding: 5px 30px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  padding: 4px 15px;
+  border: 1px solid #2eb3b7;
+}
+
+@media all and (max-width: 769px) {
+  .carousel .owl-carousel .item .inner {
+    width: 280px;
+  }
+}
+
+.carousel .owl-carousel .owl-next, .carousel .owl-carousel .owl-prev {
+  position: absolute;
+  top: 50%;
+  right: -4%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #fff !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px 0 grey;
+          box-shadow: 0 0 5px 0 grey;
+  color: #000;
+  outline: none;
+}
+
+.carousel .owl-carousel .owl-next span, .carousel .owl-carousel .owl-prev span {
+  font-size: 20px;
+}
+
+.carousel .owl-carousel .owl-next:hover span, .carousel .owl-carousel .owl-prev:hover span {
+  color: #000;
+}
+
+.carousel .owl-carousel .owl-prev {
+  left: -4%;
+}
+
+/*********************End Carousel Style*******************/
+/*# sourceMappingURL=style.css.map */
