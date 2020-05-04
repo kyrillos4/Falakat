@@ -25,6 +25,16 @@
   text-transform: uppercase;
 }
 
+@media all and (max-width: 769px) {
+  .Header .upperNav .login button {
+    padding: 5px 10px;
+  }
+}
+
+.Header .Title {
+  height: calc(100% - 100px);
+}
+
 .Header .Title span {
   font-size: .75rem;
   font-weight: 700;
@@ -37,6 +47,12 @@
 
 .Header .Title h1 {
   margin: 25px 0;
+}
+
+@media all and (max-width: 769px) {
+  .Header .Title h1 {
+    font-size: 25px;
+  }
 }
 
 .Header .Title button {

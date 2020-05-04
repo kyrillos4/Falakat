@@ -3,6 +3,7 @@ $white:#fff;
 $Sky:rgb(46, 179, 183);
 $Grey:rgb(121, 119, 119);
 $LightBlue :rgb(239, 243, 245);
+
 //functions 
 @mixin Button {
     padding: 5px 30px;
@@ -13,7 +14,6 @@ $LightBlue :rgb(239, 243, 245);
     transition: all .4s ease-in-out;
     outline: none;
 }
-
 
 /********************Start Header Style******************/
 .Header{
@@ -36,10 +36,14 @@ $LightBlue :rgb(239, 243, 245);
                 outline: none;
                 color: rgba(0,0,0,.6)!important;
                 text-transform: uppercase;
+                @media all and (max-width:769px) {
+                    padding: 5px 10px;
+                }
             }
         }
     }
     .Title{
+        height:calc(100% - 100px);
         span{
             font-size: .75rem;
             font-weight: 700;
@@ -51,6 +55,9 @@ $LightBlue :rgb(239, 243, 245);
         }
         h1{
             margin: 25px 0;
+            @media all and (max-width:769px) {
+                font-size: 25px;
+            }
         }
         button{
             @include Button();
@@ -130,6 +137,5 @@ $LightBlue :rgb(239, 243, 245);
             left: -4%;
         }
     }
-
 }
 /*********************End Carousel Style*******************/
