@@ -1,31 +1,9 @@
 //Colors 
-$white:#fff;
-$Sky:rgb(46, 179, 183);
-$Grey:rgb(121, 119, 119);
-$LightBlue :rgb(239, 243, 245);
-$DarkGreen:#132a2f;
-$Black : #0000004d;
+@import 'Colors';
 //functions 
-@mixin Button {
-    padding: 5px 20px;
-    border: none;
-    background: $Sky;
-    color: $white;
-    border-radius: 25px;
-    transition: all .4s ease-in-out;
-    outline: none;
-}
-@mixin FlexBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+@import 'Functions';
 //Global style
-a{
-    text-decoration: none !important;
-    color:#000;
-}
+@import 'GlobalStyle';
 
 /********************Start Header Style******************/
 .Header{
@@ -204,67 +182,9 @@ a{
 }
 
 /*********************End why us Style*******************/
-/*********************Start Footer Style*******************/
-footer{
-    background:$DarkGreen ;
-    padding: 20px 0;
-    .Tags{
-        border-bottom: 1px solid $Black;
-        margin: 30px 0;
-        padding: 30px 0;
-        .tag{
-            color:$white;
-            background: $Black;
-            text-align: center;
-            border-radius: 25px;
-            font-size: 14px;
-            padding: 10px 13px;
-            margin: 10px 0;
-            font-size: .8125rem;
-            font-weight: 700;
-            width:160px;
-            a{
-                color:$white;
-                &:hover{color:$white;}
-            }
-            @media all and (max-width:769px) {
-                width:120px;
-            }
-        }
-        .row{
-            .col-4{
-                padding: 0;
-                margin: 0;
-                @include FlexBox();
-            }
-        }
-    }
-    .bottomFooter{
-        .left{
-            a{
-                color: $white;
-                margin: 0 10px ;
-                font-size: 13px;
-            }
-        }
-        .right{
-            a{
-                color: $Grey;
-                margin: 0 10px;
-                font-size: 13px;
-            }
-            .colored{
-                color:$Sky;
-                transition: all .6s ease-in-out;
-                &:hover{
-                    color:$white;
-                    transition: all .6s ease-in-out;
-                }
-            }
-        }
-    }
-}
-/*********************End Footer Style*******************/
+
+/* NOTE -----> Style footer in GlobalSTyles File */
+
 /*********************Start Model Style*******************/
 .modal{
     .modal-content{

@@ -3,6 +3,109 @@ a {
   color: #000;
 }
 
+/*SStyle Navbar*/
+.upperNav {
+  padding: 20px 0;
+}
+
+.upperNav .login img {
+  margin: 0 10px;
+}
+
+.upperNav .login button {
+  background: none;
+  padding: 5px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  color: rgba(0, 0, 0, 0.6) !important;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 769px) {
+  .upperNav .login button {
+    padding: 5px 10px;
+  }
+}
+
+/*End Style Upper nav*/
+/*********************Start Footer Style*******************/
+footer {
+  background: #132a2f;
+  padding-bottom: 20px;
+}
+
+footer .Tags {
+  border-bottom: 1px solid #0000004d;
+  padding: 30px 0;
+}
+
+footer .Tags .tag {
+  color: #fff;
+  background: #0000004d;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 14px;
+  padding: 10px 13px;
+  margin: 10px 0;
+  font-size: .8125rem;
+  font-weight: 700;
+  width: 160px;
+}
+
+footer .Tags .tag a {
+  color: #fff;
+}
+
+footer .Tags .tag a:hover {
+  color: #fff;
+}
+
+@media all and (max-width: 769px) {
+  footer .Tags .tag {
+    width: 120px;
+  }
+}
+
+footer .Tags .row .col-4 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .bottomFooter .left a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+footer .bottomFooter .right a {
+  color: #797777;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+footer .bottomFooter .right .colored {
+  color: #2eb3b7;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+footer .bottomFooter .right .colored:hover {
+  color: #fff;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+/*********************End Footer Style*******************/
 /********************Start Header Style******************/
 .Header {
   background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bg.webp");
@@ -232,84 +335,7 @@ a {
 }
 
 /*********************End why us Style*******************/
-/*********************Start Footer Style*******************/
-footer {
-  background: #132a2f;
-  padding: 20px 0;
-}
-
-footer .Tags {
-  border-bottom: 1px solid #0000004d;
-  margin: 30px 0;
-  padding: 30px 0;
-}
-
-footer .Tags .tag {
-  color: #fff;
-  background: #0000004d;
-  text-align: center;
-  border-radius: 25px;
-  font-size: 14px;
-  padding: 10px 13px;
-  margin: 10px 0;
-  font-size: .8125rem;
-  font-weight: 700;
-  width: 160px;
-}
-
-footer .Tags .tag a {
-  color: #fff;
-}
-
-footer .Tags .tag a:hover {
-  color: #fff;
-}
-
-@media all and (max-width: 769px) {
-  footer .Tags .tag {
-    width: 120px;
-  }
-}
-
-footer .Tags .row .col-4 {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .bottomFooter .left a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 13px;
-}
-
-footer .bottomFooter .right a {
-  color: #797777;
-  margin: 0 10px;
-  font-size: 13px;
-}
-
-footer .bottomFooter .right .colored {
-  color: #2eb3b7;
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-}
-
-footer .bottomFooter .right .colored:hover {
-  color: #fff;
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-}
-
-/*********************End Footer Style*******************/
+/* NOTE -----> Style footer in GlobalSTyles File */
 /*********************Start Model Style*******************/
 .modal .modal-content {
   max-width: 400px;
@@ -358,4 +384,4 @@ footer .bottomFooter .right .colored:hover {
 }
 
 /*********************End End Style*******************/
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=Home.css.map */

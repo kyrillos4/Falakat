@@ -1,0 +1,15 @@
+//Functions 
+@mixin Button {
+    padding: 5px 20px;
+    border: none;
+    background: $Sky;
+    color: $white;
+    border-radius: 25px;
+    transition: all .4s ease-in-out;
+    outline: none;
+}
+@mixin FlexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

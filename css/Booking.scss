@@ -1,0 +1,119 @@
+//Colors 
+@import 'Colors';
+//functions 
+@import 'Functions';
+//Global style
+@import 'GlobalStyle';
+
+
+/*Title Function*/
+@mixin Title {
+    font-size: 13px;
+    color:$Grey;
+    letter-spacing: 1px;
+    padding: 5px 0 10px 0 ;
+    font-weight: 500;
+}
+
+
+/*Start Style Navbar*/
+.upperNav{
+    background: $white;
+}
+
+/****************Start Style Frequancy*****************************/
+.Frequancy{
+    background: $LightBlue;
+    padding: 20px 0;
+    .selectAddress{
+        h6{
+            color:$DarkGreen;
+            text-transform: uppercase;
+            cursor: pointer;
+            svg {
+                margin: 0 5px;
+            }
+        }
+    }
+    .dotsSteps{
+        width: 500px;
+        margin: 30px 0;
+        .inner{
+            .step{
+                .number{
+                    width: 25px;
+                    height: 25px;
+                    background: $Black;
+                    color:$white;
+                    border-radius: 50%;
+                    font-size: 12px;
+                }
+                .activeNum{
+                    background: $Black2;
+                    font-weight: bold;
+                }
+                h6{
+                    font-size: .8125rem;
+                    font-weight: 400;
+                    color: $Grey;
+                    margin-top: 10px;
+                }
+            }
+            .line{
+                height: 2px;
+                width: 150px;
+                background: $Grey;
+                margin: 10px 5px;
+            }
+        }
+    }
+    .details{
+        .left , .right{
+            background: $white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow:  0 0 5px 0 #ddd;
+        }
+        .right{
+            h6{text-transform: uppercase;}
+            .title{
+                padding:10px;
+            }
+            .body{
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                padding: 20px 0;
+                h6{
+                    @include Title();
+                }
+                .service{
+                    p{
+                        font-weight: 300;
+                        color: $Grey;
+                        font-size: 1rem;
+                        margin: 5px 0;
+                    }
+                }
+            }
+            .Date , .address{
+                border-bottom: 1px solid #ddd;
+                .service{
+                    padding: 15px 0;
+                    p{
+                        @include Title();
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            .price{
+                border-top: none;
+                .service{
+                    .total{color:$Sky; font-weight: 500;}
+                }
+            }
+        }
+    }
+}
+
+/*****************End Style Frequancy********************/
