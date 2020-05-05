@@ -161,69 +161,251 @@ footer .bottomFooter .right .colored:hover {
   margin: 10px 5px;
 }
 
-.Frequancy .details .left, .Frequancy .details .right {
+.Frequancy .Details .inner {
   background: #fff;
-  padding: 15px 25px;
+  padding: 20px 25px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 5px 0 #ddd;
           box-shadow: 0 0 5px 0 #ddd;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: none;
 }
 
-.Frequancy .details .right h6 {
-  text-transform: uppercase;
+.Frequancy .Details .inner ul {
+  margin-top: 35px;
 }
 
-.Frequancy .details .right .title {
+.Frequancy .Details .inner ul li {
+  margin: 10px 0;
+}
+
+.Frequancy .Details .inner ul li input[type='radio'] {
+  --active: rgb(46, 179, 183);
+  --active-inner: #fff;
+  --focus: 2px rgb(46, 179, 183);
+  --border: #BBC1E1;
+  --border-hover: rgb(46, 179, 183);
+  --background: #fff;
+  --disabled: #F6F8FF;
+  --disabled-inner: #E1E6F9;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 21px;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid var(--bc, var(--border));
+  background: var(--b, var(--background));
+  -webkit-transition: background .3s, border-color .3s, -webkit-box-shadow .2s;
+  transition: background .3s, border-color .3s, -webkit-box-shadow .2s;
+  transition: background .3s, border-color .3s, box-shadow .2s;
+  transition: background .3s, border-color .3s, box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  position: absolute;
+  -webkit-transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+  transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+  transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--active-inner);
+  opacity: 0;
+  -webkit-transform: scale(var(--s, 0.7));
+          transform: scale(var(--s, 0.7));
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:checked {
+  --b: var(--active);
+  --bc: var(--active);
+  --d-o: .3s;
+  --d-t: .6s;
+  --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:disabled {
+  --b: var(--disabled);
+  cursor: not-allowed;
+  opacity: .9;
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:disabled:checked {
+  --b: var(--disabled-inner);
+  --bc: var(--border);
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:disabled + label {
+  cursor: not-allowed;
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:hover:not(:checked):not(:disabled) {
+  --bc: var(--border-hover);
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:focus {
+  -webkit-box-shadow: 0 0 0 var(--focus);
+          box-shadow: 0 0 0 var(--focus);
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:not(.switch) {
+  width: 21px;
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:not(.switch):after {
+  opacity: var(--o, 0);
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:not(.switch):checked {
+  --o: 1;
+}
+
+.Frequancy .Details .inner ul li input[type='radio'] + label {
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  margin-left: 4px;
+  margin-bottom: 0;
+}
+
+.Frequancy .Details .inner ul li input[type='radio']:checked {
+  --s: .5;
+}
+
+.Frequancy .Details .inner ul li p {
+  padding: 0 25px;
+  font-size: 13px;
+  color: #797777;
+}
+
+.Frequancy .Details .inner button {
+  padding: 5px 20px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  transition: all .4s ease-in-out;
+}
+
+.Frequancy .Details .inner button:hover {
+  background: #132a2f;
+}
+
+.Frequancy .Details .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Frequancy .Details .Times {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 25px 0;
+}
+
+.Frequancy .Details .Times .number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.Frequancy .Details .Times .number:hover {
+  background: #2eb3b7;
+  color: #fff;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.Frequancy .Details .Times .approve {
+  width: 150px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: center;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.Frequancy .Details .Times .approve:hover {
+  background: #2eb3b7;
+  color: #fff;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.Frequancy .Details .Times textarea {
+  width: 500px;
+  border-radius: 5px;
+  height: 150px;
+  resize: none;
+  border: 1px solid #ddd;
   padding: 10px;
 }
 
-.Frequancy .details .right .body {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-}
-
-.Frequancy .details .right .body h6 {
-  font-size: 13px;
-  color: #797777;
-  letter-spacing: 1px;
-  padding: 5px 0 10px 0;
-  font-weight: 500;
-}
-
-.Frequancy .details .right .body .service p {
-  font-weight: 300;
-  color: #797777;
-  font-size: 1rem;
-  margin: 5px 0;
-}
-
-.Frequancy .details .right .Date, .Frequancy .details .right .address {
-  border-bottom: 1px solid #ddd;
-}
-
-.Frequancy .details .right .Date .service, .Frequancy .details .right .address .service {
-  padding: 15px 0;
-}
-
-.Frequancy .details .right .Date .service p, .Frequancy .details .right .address .service p {
-  font-size: 13px;
-  color: #797777;
-  letter-spacing: 1px;
-  padding: 5px 0 10px 0;
-  font-weight: 500;
-  padding: 0;
-  margin: 0;
-}
-
-.Frequancy .details .right .price {
-  border-top: none;
-}
-
-.Frequancy .details .right .price .service .total {
-  color: #2eb3b7;
-  font-weight: 500;
-}
-
 /*****************End Style Frequancy********************/
+/* NOTE -----> Style footer and Navbar in GlobalSTyles File */
 /*# sourceMappingURL=Booking.css.map */

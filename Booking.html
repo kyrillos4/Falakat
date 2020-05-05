@@ -5,6 +5,7 @@
     <title>FalakTayeb</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/Booking.css">
 </head>
 <body>
@@ -39,33 +40,33 @@
             <div class="dotsSteps d-none  d-md-flex justify-content-center align-items-center  w-100">
                 <div class="inner d-flex justify-content-center align-items-start">
                     <div class="step d-flex justify-content-center align-items-center flex-column">
-                        <span class=" activeNum number d-flex justify-content-center align-items-center">1</span>
+                        <span class=" stepOne activeNum number d-flex justify-content-center align-items-center">1</span>
                         <h6>Frequency</h6>
                     </div>
                     <span class="line"></span>
                     <div class="step d-flex justify-content-center align-items-center flex-column">
-                        <span class="number d-flex justify-content-center align-items-center">2</span>
+                        <span class="stepTwo  number d-flex justify-content-center align-items-center">2</span>
                         <h6>Service Details</h6>
                     </div>
                     <span class="line"></span>
                     <div class="step d-flex justify-content-center align-items-center flex-column">
-                        <span class="number d-flex justify-content-center align-items-center">3</span>
+                        <span  class=" stepThree number d-flex justify-content-center align-items-center">3</span>
                         <h6>Date & Time</h6>
                     </div>
                     <span class="line"></span>
                     <div class="step d-flex justify-content-center align-items-center flex-column">
-                        <span class="number d-flex justify-content-center align-items-center">4</span>
+                        <span class=" stepFour number d-flex justify-content-center align-items-center">4</span>
                         <h6>Address</h6>
                     </div>
                     <span class="line"></span>
                     <div class="step d-flex justify-content-center align-items-center flex-column">
-                        <span class="number d-flex justify-content-center align-items-center">5</span>
+                        <span class=" stepFive number d-flex justify-content-center align-items-center">5</span>
                         <h6>Payment</h6>
                     </div>
                 </div>
             </div>
             <!--Start Bookgin Details -->
-            <div class="details">
+            <!-- <div class="details">
                 <div class="row">
                     <div class="col-12 col-md-8">
                         <div class="left">
@@ -129,6 +130,90 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="Details">
+                <div class="container">
+                    <!--Question-->
+                    <div class="inner active" data-class="stepOne">
+                        <h6>How often do you need your cleaner?</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <input id="r1" type="radio" name="radio" value="1">
+                                <label for="r1">One-time</label>
+                                <p>Book a one-time cleaning</p>
+                            </li>
+                            <li>
+                                <input id="r2" type="radio" name="radio" value="1">
+                                <label for="r2">Every two weeks</label>
+                                <p>Book a one-time cleaning</p>
+                            </li>
+                            <li>
+                                <input id="r3" type="radio" name="radio" value="1">
+                                <label for="r3">Every week</label>
+                                <p>Book a one-time cleaning</p>
+                            </li>
+                        </ul>
+                        <button>Next</button>
+                    </div>
+                    <div class="inner  " data-class="stepTwo">
+                        <div class="Times">
+                            <h6>How many hours do you need your cleaner to stay?</h6>
+                            <div class="numbers d-flex justify-content-center align-items-center">
+                                <div class="number">2</div>
+                                <div class="number">3</div>
+                                <div class="number">4</div>
+                                <div class="number">5</div>
+                                <div class="number">6</div>
+                                <div class="number">7</div>
+                                <div class="number">8</div>
+                                <div class="number">9</div>
+                            </div>
+                        </div>
+                        <div class="Times">
+                            <h6>How many cleaners do you need?</h6>
+                            <div class="numbers d-flex justify-content-center align-items-center">
+                                <div class="number">1</div>
+                                <div class="number">2</div>
+                                <div class="number">3</div>
+                                <div class="number">4</div>
+                            </div>
+                        </div>
+                        <div class="Times">
+                            <h6>Do you require cleaning materials?</h6>
+                            <div class="numbers d-flex justify-content-center align-items-center">
+                                <div class="approve">yes Please</div>
+                                <div class="approve">No, I have theme </div>
+                               
+                            </div>
+                        </div>
+                        <div class="Times">
+                            <h6>Do you have any specific instructions?</h6>
+                            <textarea name="" id="" placeholder="Example:window Cleaing"></textarea>
+                        </div>
+                        <button>Next</button>
+                    </div>
+                    <div class="inner" data-class="stepThree">
+                        <h6>How often do you need your cleaner?</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <input id="r1" type="radio" name="radio" value="1">
+                                <label for="r1">One-time</label>
+                                <p>Book a one-time cleaning</p>
+                            </li>
+                            <li>
+                                <input id="r2" type="radio" name="radio" value="1">
+                                <label for="r2">Every two weeks</label>
+                                <p>Book a one-time cleaning</p>
+                            </li>
+                            <li>
+                                <input id="r3" type="radio" name="radio" value="1">
+                                <label for="r3">Every week</label>
+                                <p>Book a one-time cleaning</p>
+                            </li>
+                        </ul>
+                        <button>Next</button>
                     </div>
                 </div>
             </div>
@@ -206,6 +291,11 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/app.js"></script>
 </body>
 </html>
