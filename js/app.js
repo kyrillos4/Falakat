@@ -25,7 +25,7 @@ $('.Details .inner button').click(function(){
             $(this).next().fadeIn().css('display' , 'flex');
             console.log( $('.'+$(this).data('class') +''))
             $('.'+$(this).data('class') +'').css('backgroundColor' , 'Green');
-            console.log( $('.'+$(this).data('class') +'').next())
+            console.log( $('.'+$(this).data('class') +'').next());
         });
     }else{
       $('.inner button').text('Done');

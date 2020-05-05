@@ -161,12 +161,72 @@ footer .bottomFooter .right .colored:hover {
   margin: 10px 5px;
 }
 
-.Frequancy .Details .inner {
+.Frequancy .details .left, .Frequancy .details .right {
   background: #fff;
-  padding: 20px 25px;
+  padding: 15px 25px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 5px 0 #ddd;
           box-shadow: 0 0 5px 0 #ddd;
+}
+
+.Frequancy .details .right h6 {
+  text-transform: uppercase;
+}
+
+.Frequancy .details .right .title {
+  padding: 10px;
+}
+
+.Frequancy .details .right .body {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.Frequancy .details .right .body h6 {
+  font-size: 13px;
+  color: #797777;
+  letter-spacing: 1px;
+  padding: 5px 0 10px 0;
+  font-weight: 500;
+}
+
+.Frequancy .details .right .body .service p {
+  font-weight: 300;
+  color: #797777;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.Frequancy .details .right .Date, .Frequancy .details .right .address {
+  border-bottom: 1px solid #ddd;
+}
+
+.Frequancy .details .right .Date .service, .Frequancy .details .right .address .service {
+  padding: 15px 0;
+}
+
+.Frequancy .details .right .Date .service p, .Frequancy .details .right .address .service p {
+  font-size: 13px;
+  color: #797777;
+  letter-spacing: 1px;
+  padding: 5px 0 10px 0;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.Frequancy .details .right .price {
+  border-top: none;
+}
+
+.Frequancy .details .right .price .service .total {
+  color: #2eb3b7;
+  font-weight: 500;
+}
+
+.Frequancy .Details .inner {
+  padding: 20px 25px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
