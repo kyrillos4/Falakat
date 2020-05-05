@@ -1,9 +1,15 @@
+a {
+  text-decoration: none !important;
+  color: #fff;
+}
+
 /********************Start Header Style******************/
 .Header {
   background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bg.webp");
   background-size: cover;
   background-position: center;
   height: 550px;
+  position: relative;
   /*upper Nav*/
 }
 
@@ -73,7 +79,16 @@
   transition: all .4s ease-in-out;
 }
 
-/*********************End Header Style*******************/
+.Header .HeaderBottom {
+  background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bottom.svg");
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+}
+
+/**********************End Header Style*******************/
 /*********************Start Carousel Style*******************/
 .carousel {
   padding: 50px 0;
@@ -165,4 +180,95 @@
 }
 
 /*********************End Carousel Style*******************/
+/*********************Start Why us Style*******************/
+.whyUS .title {
+  text-align: center !important;
+}
+
+@media all and (max-width: 769px) {
+  .whyUS .title h3 {
+    font-size: 24px;
+  }
+}
+
+.whyUS .info {
+  background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/love-justmop-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  margin-top: 30px;
+}
+
+.whyUS .info .LeftSide p {
+  color: #797777;
+}
+
+.whyUS .info .LeftSide h3 {
+  margin: 30px 0;
+}
+
+.whyUS .info .LeftSide .subInfo h4 {
+  font-size: 20px;
+}
+
+.whyUS .info .LeftSide .subInfo p {
+  color: #797777;
+  font-size: 15px;
+}
+
+/*********************End why us Style*******************/
+/*********************Start Footer Style*******************/
+footer {
+  background: #132a2f;
+  padding: 20px 0;
+}
+
+footer .Tags {
+  border-bottom: 1px solid #0000004d;
+  margin: 30px 0;
+  padding: 30px 0;
+}
+
+footer .Tags .tag {
+  color: #fff;
+  background: #0000004d;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 14px;
+  padding: 3px 13px;
+  margin: 10px 0;
+  font-size: .8125rem;
+  font-weight: 700;
+  width: 120px;
+}
+
+footer .Tags .tag a:hover {
+  color: #fff;
+}
+
+footer .bottomFooter .left a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+footer .bottomFooter .right a {
+  color: #797777;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+footer .bottomFooter .right .colored {
+  color: #2eb3b7;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+footer .bottomFooter .right .colored:hover {
+  color: #fff;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+/*********************End Footer Style*******************/
 /*# sourceMappingURL=style.css.map */
