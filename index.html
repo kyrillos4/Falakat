@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-6">
                         <div class="login d-flex justify-content-end align-items-center">
-                            <button class="login">Login <i class="fas fa-user"></i></button>
+                            <button class="login" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Login <i class="fas fa-user"></i></button>
                             <img src="https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/ae.svg"  alt="">
                             <div class="lang">العربية</div>
                         </div>
@@ -232,6 +232,34 @@
         </div>
     </footer>
     <!--End Footer Section-->
+    <!-- Start Login Model this model will show when click on login button-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Please verify your number</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <h6>YOUR MOBILE NUMBER</h6>
+                    <div class="group">
+                        <span>+971</span>
+                        <input type="text" placeholder="001210000" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- End Login Model-->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

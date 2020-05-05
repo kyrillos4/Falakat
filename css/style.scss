@@ -212,7 +212,7 @@ footer{
             text-align: center;
             border-radius: 25px;
             font-size: 14px;
-            padding: 5px 13px;
+            padding: 10px 13px;
             margin: 10px 0;
             font-size: .8125rem;
             font-weight: 700;
@@ -261,3 +261,11 @@ footer{
     }
 }
 /*********************End Footer Style*******************/
+/*********************Start Model Style*******************/
+.modal{
+    .modal-content{
+        max-width:400px;
+    }
+}
+
+/*********************End End Style*******************/
