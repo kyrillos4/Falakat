@@ -18,7 +18,7 @@ $Black : #0000004d;
 //Global style
 a{
     text-decoration: none !important;
-    color:$white;
+    color:#000;
 }
 
 /********************Start Header Style******************/
@@ -26,8 +26,18 @@ a{
     background: url('https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bg.webp');
     background-size: cover;
     background-position: center;
-    height: 550px;
+    height: 650px;
     position: relative;
+    /*Covid div*/
+    .covid{
+        background: #eee;
+        padding: 15px 0;
+        a{
+            text-decoration: underline !important;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+    }
     /*upper Nav*/
     .upperNav{
         padding: 20px 0;
@@ -50,7 +60,7 @@ a{
         }
     }
     .Title{
-        height:calc(100% - 100px);
+        height:calc(100% - 180px);
         span{
             font-size: .75rem;
             font-weight: 700;
@@ -118,7 +128,7 @@ a{
                 }
                 button{
                     @include Button();
-                    padding: 4px 15px;
+                    padding: 5px 20px;
                     border: 1px solid $Sky;
                 }
                 @media all and (max-width:769px) {
@@ -201,12 +211,18 @@ footer{
             text-align: center;
             border-radius: 25px;
             font-size: 14px;
-            padding: 3px 13px;
+            padding: 5px 13px;
             margin: 10px 0;
             font-size: .8125rem;
             font-weight: 700;
-            width:120px;
-            a:hover{color:$white;}
+            width:160px;
+            a{
+                color:$white;
+                &:hover{color:$white;}
+            }
+            @media all and (max-width:769px) {
+                width:120px;
+            }
         }
     }
     .bottomFooter{

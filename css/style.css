@@ -1,6 +1,6 @@
 a {
   text-decoration: none !important;
-  color: #fff;
+  color: #000;
 }
 
 /********************Start Header Style******************/
@@ -8,9 +8,21 @@ a {
   background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bg.webp");
   background-size: cover;
   background-position: center;
-  height: 550px;
+  height: 650px;
   position: relative;
+  /*Covid div*/
   /*upper Nav*/
+}
+
+.Header .covid {
+  background: #eee;
+  padding: 15px 0;
+}
+
+.Header .covid a {
+  text-decoration: underline !important;
+  font-weight: bold;
+  margin: 0 5px;
 }
 
 .Header .upperNav {
@@ -38,7 +50,7 @@ a {
 }
 
 .Header .Title {
-  height: calc(100% - 100px);
+  height: calc(100% - 180px);
 }
 
 .Header .Title span {
@@ -141,7 +153,7 @@ a {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   outline: none;
-  padding: 4px 15px;
+  padding: 5px 20px;
   border: 1px solid #2eb3b7;
 }
 
@@ -235,15 +247,25 @@ footer .Tags .tag {
   text-align: center;
   border-radius: 25px;
   font-size: 14px;
-  padding: 3px 13px;
+  padding: 5px 13px;
   margin: 10px 0;
   font-size: .8125rem;
   font-weight: 700;
-  width: 120px;
+  width: 160px;
+}
+
+footer .Tags .tag a {
+  color: #fff;
 }
 
 footer .Tags .tag a:hover {
   color: #fff;
+}
+
+@media all and (max-width: 769px) {
+  footer .Tags .tag {
+    width: 120px;
+  }
 }
 
 footer .bottomFooter .left a {
