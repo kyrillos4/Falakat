@@ -25,6 +25,12 @@ a {
   margin: 0 5px;
 }
 
+@media all and (max-width: 769px) {
+  .Header .covid {
+    font-size: 13px;
+  }
+}
+
 .Header .upperNav {
   padding: 20px 0;
 }

@@ -37,6 +37,9 @@ a{
             font-weight: bold;
             margin: 0 5px;
         }
+        @media all and (max-width:769px){
+            font-size: 13px;
+        }
     }
     /*upper Nav*/
     .upperNav{
