@@ -30,13 +30,10 @@ a{
     position: relative;
     /*Covid div*/
     .covid{
-        background: #eee;
+        background: $DarkGreen;
         padding: 15px 0;
-        a{
-            text-decoration: underline !important;
-            font-weight: bold;
-            margin: 0 5px;
-        }
+        font-weight: bold;
+        color:$white;
         @media all and (max-width:769px){
             font-size: 13px;
         }

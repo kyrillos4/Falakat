@@ -15,14 +15,10 @@ a {
 }
 
 .Header .covid {
-  background: #eee;
+  background: #132a2f;
   padding: 15px 0;
-}
-
-.Header .covid a {
-  text-decoration: underline !important;
   font-weight: bold;
-  margin: 0 5px;
+  color: #fff;
 }
 
 @media all and (max-width: 769px) {
