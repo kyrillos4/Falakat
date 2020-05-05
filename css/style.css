@@ -315,5 +315,47 @@ footer .bottomFooter .right .colored:hover {
   max-width: 400px;
 }
 
+.modal .modal-body form h6 {
+  color: #797777;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.modal .modal-body form .group {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.modal .modal-body form .group input {
+  border: none;
+  outline: none;
+}
+
+.modal .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-footer .btn {
+  padding: 5px 20px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  width: 150px;
+}
+
 /*********************End End Style*******************/
 /*# sourceMappingURL=style.css.map */
