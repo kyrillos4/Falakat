@@ -15,10 +15,9 @@ a {
 }
 
 .Header .covid {
-  background: #132a2f;
+  background: #eff3f5;
   padding: 15px 0;
   font-weight: bold;
-  color: #fff;
 }
 
 @media all and (max-width: 769px) {
@@ -52,7 +51,7 @@ a {
 }
 
 .Header .Title {
-  height: calc(100% - 180px);
+  height: calc(100% - 250px);
 }
 
 .Header .Title span {
@@ -76,7 +75,7 @@ a {
 }
 
 .Header .Title button {
-  padding: 5px 30px;
+  padding: 5px 20px;
   border: none;
   background: #2eb3b7;
   color: #fff;
@@ -85,6 +84,8 @@ a {
   transition: all .4s ease-in-out;
   outline: none;
   text-transform: uppercase;
+  padding: 10px 50px;
+  font-weight: 700;
 }
 
 .Header .Title button:hover {
@@ -147,7 +148,7 @@ a {
 }
 
 .carousel .owl-carousel .item .inner button {
-  padding: 5px 30px;
+  padding: 5px 20px;
   border: none;
   background: #2eb3b7;
   color: #fff;
@@ -268,6 +269,20 @@ footer .Tags .tag a:hover {
   footer .Tags .tag {
     width: 120px;
   }
+}
+
+footer .Tags .row .col-4 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .bottomFooter .left a {

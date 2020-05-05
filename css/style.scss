@@ -7,7 +7,7 @@ $DarkGreen:#132a2f;
 $Black : #0000004d;
 //functions 
 @mixin Button {
-    padding: 5px 30px;
+    padding: 5px 20px;
     border: none;
     background: $Sky;
     color: $white;
@@ -30,10 +30,9 @@ a{
     position: relative;
     /*Covid div*/
     .covid{
-        background: $DarkGreen;
+        background: $LightBlue;
         padding: 15px 0;
         font-weight: bold;
-        color:$white;
         @media all and (max-width:769px){
             font-size: 13px;
         }
@@ -60,7 +59,7 @@ a{
         }
     }
     .Title{
-        height:calc(100% - 180px);
+        height:calc(100% - 250px);
         span{
             font-size: .75rem;
             font-weight: 700;
@@ -79,6 +78,8 @@ a{
         button{
             @include Button();
             text-transform: uppercase;
+            padding: 10px 50px;
+            font-weight: 700;
             &:hover{
                 background: $Grey;
                 transition: all .4s ease-in-out;;
@@ -222,6 +223,15 @@ footer{
             }
             @media all and (max-width:769px) {
                 width:120px;
+            }
+        }
+        .row{
+            .col-4{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
