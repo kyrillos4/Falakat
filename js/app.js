@@ -19,7 +19,6 @@ $('.owl-carousel').owlCarousel({
 //Questions Script 
 $('.Details .inner button').click(function(){
     console.log($('.step'));
-
     if($('.Details .inner').last().css('display') == 'none'){
         $(this).parent().fadeOut(function(){
             $(this).next().fadeIn().css('display' , 'flex');
@@ -29,11 +28,11 @@ $('.Details .inner button').click(function(){
     }else{
         $('.inner button').text('Done');
     }
-
-        // if($('.step:eq(0)').hasClass('--current')){
-        //     $('.step:eq(0)').removeClass('--current').addClass('--completed').next().removeClass('--pending').addClass('--current');
-        // }
-    for(let i = 0 ; i < $('.step').length; i++){
+    // if($('.step:eq(0)').hasClass('--current')){
+    //     $('.step:eq(0)').removeClass('--current').addClass('--completed').next().removeClass('--pending').addClass('--current');
+    // }
+    console.log($('.step').length)
+    for(let i = 0 ; i < $('.step').length ; i++){
         if($('.step:eq('+i+')').hasClass('--current')){
             $('.step:eq('+i+')').removeClass('--current').addClass('--completed').next().removeClass('--pending');
             // if($('.step:eq('+i+')').hasClass('--current'))

@@ -147,6 +147,12 @@ footer .bottomFooter .right .colored:hover {
   width: 400px;
 }
 
+@media all and (max-width: 769px) {
+  .Service .header .title {
+    width: 85%;
+  }
+}
+
 .Service .header .title h1 {
   font-weight: 700;
 }
