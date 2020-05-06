@@ -8,6 +8,10 @@
 /************************Start Style Dry Service*********************/
 .Dry{
     /*Note ---> header Styled from GlobalStyle */
+    .headerService{
+        background: url('https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/images/uploads/services/1541948248laundry.png');
+        background-position: center left;
+    }
     //Stylle Prices Table
     .Prices{
         table{
