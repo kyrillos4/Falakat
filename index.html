@@ -15,9 +15,9 @@
     <!--Start Header Section-->
     <section class="Header">
         <!--Covid Div-->
-        <div class="covid d-flex justify-content-center">#Stay Safe-Stay Home.</div>
+        <div class="covid d-flex justify-content-center wow fadeInDown">#Stay Safe-Stay Home.</div>
         <!--Upper Nav-->
-        <div class="upperNav">
+        <div class="upperNav wow fadeIn">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
@@ -38,9 +38,9 @@
         <!--Middel Text-->
         <div class="Title d-flex justify-content-center align-items-start flex-column">
             <div class="container">
-                <span>#1 HOME CLEANING SERVICE</span>
-                <h1>Your trusted maid service<br> in UAE starting from AED<br> 30 per hour</h1>
-                <a href="Booking.html"><button>Book Now</button></a>
+                <span class="wow fadeInUp d-block" data-wow-delay='.2s' >#1 HOME CLEANING SERVICE</span>
+                <h1 class="wow fadeInUp " data-wow-delay='.4s'>Your trusted maid service<br> in UAE starting from AED<br> 30 per hour</h1>
+                <a class="wow fadeInUp" data-wow-delay=".6s" href="Booking.html"><button>Book Now</button></a>
             </div>
         </div>
         <!--Wave Div-->
@@ -56,14 +56,16 @@
             </div>
             <div class="owl-carousel owl-theme">
                 <div class="item d-flex justify-content-center align-items-center">
-                    <div class="inner d-flex justify-content-center align-items-center flex-column">
-                        <img src="./images/3.png" alt="">
-                        <h6>MATTRESS CLEANING</h6>
-                        <p>
-                            We provide you with the best experts for your furniture.
-                        </p>
-                        <button>Book Now</button>
-                    </div>
+                    <a href="/Service.html">
+                        <div class="inner d-flex justify-content-center align-items-center flex-column">
+                            <img src="./images/3.png" alt="">
+                            <h6>HOME CLEANING</h6>
+                            <p>
+                                We provide you with the best experts for your furniture.
+                            </p>
+                            <button>Book Now</button>
+                        </div>
+                    </a>
                 </div>
                 <div class="item d-flex justify-content-center align-items-center">
                     <div class="inner d-flex justify-content-center align-items-center flex-column">
@@ -264,6 +266,10 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/app.js"></script>
 </body>
 </html>

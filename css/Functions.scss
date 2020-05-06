@@ -13,3 +13,65 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin Carousel {
+    position: relative;
+    .item{
+        .inner{
+            text-align: center;
+            background: $LightBlue;
+            height:300px;
+            padding: 0 20px;
+            border-radius: 5px;
+            width: 230px;
+            transition: all .6s ease-in-out;
+            &:hover{
+                background: $Sky;
+                color: $white;
+                transition: all .6s ease-in-out;
+                button{
+                    transition: all .6s ease-in-out;
+                    background-color: $white;
+                    color: $Sky;
+                }
+            }
+            img{
+                width:80px;
+                margin: 20px 0;
+            }
+            button{
+                @include Button();
+                padding: 5px 20px;
+                border: 1px solid $Sky;
+            }
+            @media all and (max-width:769px) {
+                width: 280px;
+            }
+        }
+    }
+
+    .owl-next , .owl-prev{
+        position:absolute;
+        top:50%;
+        right: -4%;
+        transform: translateY(-50%);
+        background-color: $white !important;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow:  0 0 5px 0 grey;
+        color: #000;
+        outline: none;
+        span{
+            font-size: 20px;
+        }
+        &:hover{
+            span{
+                color: #000;
+            }
+        }
+    }
+    .owl-prev{
+        left: -4%;
+    }
+}

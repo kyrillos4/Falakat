@@ -1,0 +1,276 @@
+a {
+  text-decoration: none !important;
+  color: #000;
+}
+
+/*SStyle Navbar*/
+.upperNav {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.upperNav .login img {
+  margin: 0 10px;
+}
+
+.upperNav .login button {
+  background: none;
+  padding: 5px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  color: rgba(0, 0, 0, 0.6) !important;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 769px) {
+  .upperNav .login button {
+    padding: 5px 10px;
+  }
+}
+
+/*End Style Upper nav*/
+/*********************Start Footer Style*******************/
+footer {
+  background: #132a2f;
+  padding-bottom: 20px;
+}
+
+footer .Tags {
+  border-bottom: 1px solid #0000004d;
+  padding: 30px 0;
+}
+
+footer .Tags .tag {
+  color: #fff;
+  background: #0000004d;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 14px;
+  padding: 10px 13px;
+  margin: 10px 0;
+  font-size: .8125rem;
+  font-weight: 700;
+  width: 160px;
+}
+
+footer .Tags .tag a {
+  color: #fff;
+}
+
+footer .Tags .tag a:hover {
+  color: #fff;
+}
+
+@media all and (max-width: 769px) {
+  footer .Tags .tag {
+    width: 120px;
+  }
+}
+
+footer .Tags .row .col-4 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .bottomFooter .left a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+footer .bottomFooter .right a {
+  color: #797777;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+footer .bottomFooter .right .colored {
+  color: #2eb3b7;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+footer .bottomFooter .right .colored:hover {
+  color: #fff;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+/*********************End Footer Style*******************/
+.Service {
+  /*****************Services style********************/
+}
+
+.Service .url {
+  margin: 15px 0;
+}
+
+.Service .url a, .Service .url svg {
+  color: #797777;
+}
+
+.Service .header {
+  background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/images/uploads/services/1552580042shutterstock_772636024.jpg");
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.Service .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.Service .header .title {
+  z-index: 9999;
+  position: absolute;
+  bottom: 10%;
+  width: 400px;
+}
+
+.Service .header .title h1 {
+  font-weight: 700;
+}
+
+.Service .header .title button {
+  padding: 5px 20px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  font-weight: 500;
+}
+
+.Service .header .title button:hover {
+  background: #797777;
+}
+
+.Service .Details {
+  padding: 30px 0;
+}
+
+.Service .Details h1 {
+  font-weight: 700;
+}
+
+.Service .Details p {
+  color: #797777;
+}
+
+.Service .Services {
+  padding: 30px 0;
+}
+
+.Service .Services .title h6 {
+  color: #797777;
+  font-size: 13px;
+}
+
+.Service .Services .title h1 {
+  font-size: 22px;
+  margin: 10px 0 35px 0;
+}
+
+.Service .Services .owl-carousel {
+  position: relative;
+}
+
+.Service .Services .owl-carousel .item .inner {
+  text-align: center;
+  background: #eff3f5;
+  height: 300px;
+  padding: 0 20px;
+  border-radius: 5px;
+  width: 230px;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.Service .Services .owl-carousel .item .inner:hover {
+  background: #2eb3b7;
+  color: #fff;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.Service .Services .owl-carousel .item .inner:hover button {
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  background-color: #fff;
+  color: #2eb3b7;
+}
+
+.Service .Services .owl-carousel .item .inner img {
+  width: 80px;
+  margin: 20px 0;
+}
+
+.Service .Services .owl-carousel .item .inner button {
+  padding: 5px 20px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  padding: 5px 20px;
+  border: 1px solid #2eb3b7;
+}
+
+@media all and (max-width: 769px) {
+  .Service .Services .owl-carousel .item .inner {
+    width: 280px;
+  }
+}
+
+.Service .Services .owl-carousel .owl-next, .Service .Services .owl-carousel .owl-prev {
+  position: absolute;
+  top: 50%;
+  right: -4%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #fff !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px 0 grey;
+          box-shadow: 0 0 5px 0 grey;
+  color: #000;
+  outline: none;
+}
+
+.Service .Services .owl-carousel .owl-next span, .Service .Services .owl-carousel .owl-prev span {
+  font-size: 20px;
+}
+
+.Service .Services .owl-carousel .owl-next:hover span, .Service .Services .owl-carousel .owl-prev:hover span {
+  color: #000;
+}
+
+.Service .Services .owl-carousel .owl-prev {
+  left: -4%;
+}
+/*# sourceMappingURL=Service.css.map */

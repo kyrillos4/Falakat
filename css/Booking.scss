@@ -30,43 +30,244 @@
             color:$DarkGreen;
             text-transform: uppercase;
             cursor: pointer;
-            svg {
-                margin: 0 5px;
-            }
+        }
+        svg {
+            margin: 0 5px;
         }
     }
-    .dotsSteps{
-        width: 500px;
-        margin: 30px 0;
-        .inner{
-            .step{
-                .number{
-                    width: 25px;
-                    height: 25px;
-                    background: $Black;
-                    color:$white;
-                    border-radius: 50%;
-                    font-size: 12px;
-                }
-                .activeNum{
-                    background: $Black2;
-                    font-weight: bold;
-                }
-                h6{
-                    font-size: .8125rem;
-                    font-weight: 400;
-                    color: $Grey;
-                    margin-top: 10px;
-                }
+    // .dotsSteps{
+    //     width: 500px;
+    //     margin: 30px 0;
+    //     .inner{
+    //         .step{
+    //             .number{
+    //                 width: 25px;
+    //                 height: 25px;
+    //                 background: $Black;
+    //                 color:$white;
+    //                 border-radius: 50%;
+    //                 font-size: 12px;
+    //             }
+    //             .activeNum{
+    //                 background: $Black2;
+    //                 font-weight: bold;
+    //             }
+    //             h6{
+    //                 font-size: .8125rem;
+    //                 font-weight: 400;
+    //                 color: $Grey;
+    //                 margin-top: 10px;
+    //             }
+    //         }
+    //         .line{
+    //             height: 2px;
+    //             width: 150px;
+    //             background: $Grey;
+    //             margin: 10px 5px;
+    //         }
+    //     }
+    // }
+    .booking-steps {
+  
+        width: 100%;
+        height: 45px;
+        background: $white; 
+        display: flex;
+        margin: 15px 0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      
+      .step {
+        
+        height: 45px;
+        color: #000;
+        background: #d0cdcd;
+        border: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: inline-flex;
+      }
+      
+      .step-label {
+        
+        height: inherit;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        line-height: 1rem;
+        padding-left: 5px;
+        font-size: 12px
+      }
+      
+      .step-position {
+        
+        color: white;
+        width: auto;
+        min-width: 34px;
+        height: inherit;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 4px;
+      }
+      
+      .step-position::before {
+       
+        content: '';
+        width: 34px; 
+        height: 34px;
+        border-radius: 50px;
+        background: $Sky;
+        position: absolute;
+        top: 6px;
+        z-index: 0;
+        border: 1px solid #ddd;
+      }
+      
+      .step-number {
+        
+        font-size: 14px;
+        z-index: 1;
+      }
+      
+      .step-check {
+      
+        display: none;
+        z-index: 1;
+        font-size: 22px;
+      }
+      
+       .step-arrow {
+      
+         border-left: 18px solid #d0cdcd; 
+         border-top: 22px solid transparent; 
+         border-bottom: 22px solid transparent; 
+         background:$white;
+      }
+      
+      
+        .step.--completed {
+          
+          background: #cfcccc;
+          
+          & .step-check {
+           
+            display: block;
+          }
+          
+          & .step-number,
+          & .step-label,
+          & .step-arrow { 
+            
+            display: none;
+          }
+          
+          & .step-position {
+        
+            color: white;
+            
+            &:before {
+              
+              background: $Sky;
             }
-            .line{
-                height: 2px;
-                width: 150px;
-                background: $Grey;
-                margin: 10px 5px;
+          }
+        }  
+        
+        .step.--current {
+          
+          background: #cfcccc;
+          
+          & .step-label {
+            
+            display: flex;
+          }
+          
+          & .step-number,
+          & .step-arrow {
+            display: block;
+            
+          }
+          
+          & .step-check {
+            
+            display: none;
+          }   
+          
+          & .step-position {
+        
+            color: white;
+            
+            &:before {
+              
+              background: $Sky;
             }
+          }
         }
-    }
+        
+        .step.--pending {
+          
+          background: inherit;
+          
+          & .step-check,
+          & .step-label,
+          & .step-arrow {
+           
+            display: none;
+          }
+          
+          & .step-number {
+            
+            display: block;
+          }
+          
+           & .step-position {
+        
+            color: #4f90cd;
+            
+            &:before {
+              
+              background: white;
+            }
+          }
+        }
+      
+      @media (min-width: 769px) {
+       
+        .step-arrow {
+             padding-right: 5px;
+        }
+        
+        .step.--completed {
+          
+          padding-right: 10px;
+      
+          &:first-child {
+            
+            padding: 0 10px 0 16px;
+          }
+          
+          & .step-label {
+           
+            display: flex;
+          }
+        }  
+        
+        .step.--pending {
+          
+          background: inherit;
+          padding-right: 10px;
+          
+          & .step-label {
+           
+            display: flex;
+          }
+        }
+        .step-arrow{
+            background: #fff;
+        }
+      }
     .details{
         .left , .right{
             background: $white;
@@ -121,6 +322,7 @@
             @include FlexBox();
             flex-direction: column;
             align-items: flex-start;
+            justify-content: flex-start;
             display: none;
             ul{
                 margin-top: 35px;
@@ -220,15 +422,27 @@
                       }
                 }
             }
-            button{
-                @include Button();
-                position:absolute;
-                bottom:5%;
-                right: 5%;
-                transition: all .4s ease-in-out;
-                &:hover{
-                    background:$DarkGreen;
+            .date{
+                input{
+                    padding: 5px 15px;
+                    border:1px solid #eee;
+                    margin:15px 0 ;
+                    width:450px;
+                    @media all and (max-width:769px) {
+                        width:290px;
+                        margin-bottom:40px;
+                    } 
                 }
+            }
+        }
+        button{
+            @include Button();
+            position:absolute;
+            bottom:5%;
+            right: 5%;
+            transition: all .4s ease-in-out;
+            &:hover{
+                background:$DarkGreen;
             }
         }
         .active{
@@ -285,5 +499,28 @@
 
 /*****************End Style Frequancy********************/
 
+/*Styled model */
+.modal{
+    ul{
+        li{
+            padding:10px;
+            border:1px solid #eee;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: all .4s ease-in-out;
+            &:hover{
+                background: $Sky;
+                color:$white;
+            }
+        }
+    }
+}
+
 
 /* NOTE -----> Style footer and Navbar in GlobalSTyles File */
+
+//Date Picker Style
+.datetimepicker{
+    left:170.5px !important;
+    top:369.281px !important;
+}

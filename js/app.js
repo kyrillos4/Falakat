@@ -16,19 +16,47 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-
 //Questions Script 
-let Result = [];
 $('.Details .inner button').click(function(){
+    console.log($('.step'));
+
     if($('.Details .inner').last().css('display') == 'none'){
         $(this).parent().fadeOut(function(){
             $(this).next().fadeIn().css('display' , 'flex');
-            console.log( $('.'+$(this).data('class') +''))
-            $('.'+$(this).data('class') +'').css('backgroundColor' , 'Green');
-            console.log( $('.'+$(this).data('class') +'').next());
+            $('.'+$(this).data('class') +'').removeClass('activeNum').css('backgroundColor' , 'Green');
+            $('.'+$(this).next().data('class') +'').addClass('activeNum')
         });
     }else{
-      $('.inner button').text('Done');
+        $('.inner button').text('Done');
     }
-    // $(this).parent().addClass('wow fadeInDown').next().addClass('wow fadeInUp')
-})
+
+        // if($('.step:eq(0)').hasClass('--current')){
+        //     $('.step:eq(0)').removeClass('--current').addClass('--completed').next().removeClass('--pending').addClass('--current');
+        // }
+    for(let i = 0 ; i < $('.step').length; i++){
+        if($('.step:eq('+i+')').hasClass('--current')){
+            $('.step:eq('+i+')').removeClass('--current').addClass('--completed').next().removeClass('--pending');
+            // if($('.step:eq('+i+')').hasClass('--current'))
+            // $('.step:eq('+(i + 1)+')').removeClass('--pending').addClass('--current')
+        }
+    }
+
+});
+//Modein Select Country in Booking page
+(function(){
+    for(let i = 0 ; i < $('.modal ul li').length; i++){
+        $('.modal ul li:eq('+i+')').click(function(){
+            $('.city').text($(this).text());
+            $('.fade').removeClass('show').css('display' , 'none');
+            $('body').removeClass('modal-open')
+        })
+    }
+})();
+// Data Picker in Booking page
+//Date and time picker 
+$(".form_datetime").datetimepicker({
+    format: "dd MM yyyy - HH:ii P",
+    showMeridian: true,
+    autoclose: true,
+    todayBtn: true
+});
