@@ -50,6 +50,16 @@ $('.Details .inner button').click(function(){
             $('body').removeClass('modal-open')
         })
     }
+
+
+    //SCript For Questions in Dry Page
+    // for(let i =0 ; i < $('.Dry .Questions .collapse ').length ; i++ ){
+    //     if($('.Dry .Questions .collapse:eq('+i+')').hasClass('show')){
+    //         console.log($('.Dry .Questions .collapse ').length)
+    //         $('.Dry .Questions .collapse:eq('+i+')').prev().css('backgroundColor' , 'rgb(46, 179, 183)').firs
+    //     }
+        
+    // }
 })();
 // Data Picker in Booking page
 //Date and time picker 
@@ -59,3 +69,5 @@ $(".form_datetime").datetimepicker({
     autoclose: true,
     todayBtn: true
 });
+
+
