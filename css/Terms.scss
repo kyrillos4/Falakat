@@ -1,0 +1,26 @@
+//Colors 
+@import 'Colors';
+//functions 
+@import 'Functions';
+//Global style
+@import 'GlobalStyle';
+
+.Terms{
+    /*Note ---> header Styled from GlobalStyle */
+    .headerService{
+        background: $Sky;
+        height:250px;
+
+    }
+    /*****************body style********************/
+    .body{
+        background: $LightBlue;
+        padding: 30px 0;
+        .text{
+            padding: 30px;
+            border-radius: 10px;
+            background: $white;
+            border:1px solid #ddd;
+        }
+    }
+}

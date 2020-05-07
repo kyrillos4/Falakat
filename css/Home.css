@@ -52,6 +52,9 @@ footer .Tags .tag {
   font-size: .8125rem;
   font-weight: 700;
   width: 160px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 footer .Tags .tag a {
@@ -65,7 +68,16 @@ footer .Tags .tag a:hover {
 @media all and (max-width: 769px) {
   footer .Tags .tag {
     width: 120px;
+    font-size: 10px;
   }
+}
+
+footer .Tags .tag:hover {
+  background: #2eb3b7;
+  -webkit-transition: all .5s ease-in-out !important;
+  transition: all .5s ease-in-out !important;
+  -webkit-box-shadow: 0 0 5px 0 #797777 !important;
+          box-shadow: 0 0 5px 0 #797777 !important;
 }
 
 footer .Tags .row .col-4 {
@@ -402,8 +414,20 @@ footer .bottomFooter .right .colored:hover {
   margin: 30px 0;
 }
 
+@media all and (max-width: 769px) {
+  .whyUS .info .LeftSide h3 {
+    font-size: 20px;
+  }
+}
+
 .whyUS .info .LeftSide .subInfo h4 {
   font-size: 20px;
+}
+
+@media all and (max-width: 769px) {
+  .whyUS .info .LeftSide .subInfo h4 {
+    font-size: 18px;
+  }
 }
 
 .whyUS .info .LeftSide .subInfo p {

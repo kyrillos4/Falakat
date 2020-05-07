@@ -54,12 +54,20 @@ footer{
             font-size: .8125rem;
             font-weight: 700;
             width:160px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
             a{
                 color:$white;
                 &:hover{color:$white;}
             }
             @media all and (max-width:769px) {
                 width:120px;
+                font-size: 10px;
+            }
+            &:hover{
+                background: $Sky;
+                transition: all .5s ease-in-out !important;
+                box-shadow:  0 0 5px 0 $Grey !important;
             }
         }
         .row{

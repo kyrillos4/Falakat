@@ -488,5 +488,13 @@
 //Date Picker Style
 .datetimepicker{
     left:170.5px !important;
-    top:369.281px !important;
+    top:403.281px !important;
+}
+//Map Model 
+.mapModel{
+  .modal-footer{
+    button{
+      @include Button();  
+    }
+  }
 }

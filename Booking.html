@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-6">
                     <div class="login d-flex justify-content-end align-items-center">
-                        <button class="login" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Login <i class="fas fa-user"></i></button>
+                        <button class="login" >Login <i class="fas fa-user"></i></button>
                         <img src="https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/ae.svg"  alt="">
                         <div class="lang">العربية</div>
                     </div>
@@ -40,7 +40,7 @@
             <h1 class="text-center">Frequency</h1>
             <!--Start Steps Dots -->
             <div class="booking-steps">
-                <button class="step --current active">
+                <button class="step --current stepOne">
                   <span class="step-position">
                     <span class="step-number">1</span>
                     <span class="step-check fa fa-check"></span>
@@ -49,7 +49,7 @@
                   <span class="step-arrow"></span> 
                 </button>
                 
-                <button class="step --pending ">
+                <button class="step --pending stepTwo">
                   <span class="step-position">
                     <span class="step-number">2</span>
                     <span class="step-check fa fa-check"></span>
@@ -58,7 +58,7 @@
                   <span class="step-arrow"></span> 
                 </button>
                 
-                <button class="step --pending">
+                <button class="step --pending stepThree">
                   <span class="step-position">
                     <span class="step-number">3</span>
                     <span class="step-check fa fa-check"></span>
@@ -67,7 +67,7 @@
                   <span class="step-arrow"></span> 
                 </button>
                 
-                <button class="step --pending">
+                <button class="step --pending stepFour">
                   <span class="step-position">
                     <span class="step-number">4</span>
                     <span class="step-check fa fa-check"></span>
@@ -76,7 +76,7 @@
                   <span class="step-arrow"></span> 
                 </button>
                 
-                <button class="step --pending">
+                <button class="step --pending stepFive">
                   <span class="step-position">
                     <span class="step-number">5</span>
                     <span class="step-check fa fa-check"></span>
@@ -95,7 +95,7 @@
                                 <h6>How often do you need your cleaner?</h6>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <input id="r1" type="radio" name="radio" value="1">
+                                        <input id="r1" type="radio" name="radio" value="1" checked>
                                         <label for="r1">One-time</label>
                                         <p>Book a one-time cleaning</p>
                                     </li>
@@ -156,7 +156,7 @@
                                     <span class="add-on"><i class="icon-th"></i></span>
                                     <!-- <span class="nameErr">Please Choose Date And Time </span> -->
                                 </div>
-                                <button>Next</button>
+                                <button data-toggle="modal" data-target="#MapModel">Next</button>
                             </div>
                         </div>
                     </div>
@@ -312,7 +312,26 @@
     </div>
 
     <!-----------------End Booking Page---------------->
-
+    <!------------------Sart Map Model ------------>
+    <div class="mapModel modal fade" id="MapModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Please Choose Your Location </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                Map Here 
+            </div>
+            <div class="modal-footer d-flex justify-content-center  ">
+            <button type="button" class="btn btn-primary">Continue</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!------------------End Map Model ------------>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

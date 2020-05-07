@@ -52,6 +52,7 @@ footer .Tags .tag {
   font-size: .8125rem;
   font-weight: 700;
   width: 160px;
+  cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -194,103 +195,25 @@ footer .bottomFooter .right .colored:hover {
 }
 
 /*************************End Service Page Style********** *************/
-.Service {
+.Terms {
   /*Note ---> header Styled from GlobalStyle */
-  /*****************Services style********************/
+  /*****************body style********************/
 }
 
-.Service .Services {
+.Terms .headerService {
+  background: #2eb3b7;
+  height: 250px;
+}
+
+.Terms .body {
+  background: #eff3f5;
   padding: 30px 0;
 }
 
-.Service .Services .title h6 {
-  color: #797777;
-  font-size: 13px;
+.Terms .body .text {
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
 }
-
-.Service .Services .title h1 {
-  font-size: 22px;
-  margin: 10px 0 35px 0;
-}
-
-.Service .Services .owl-carousel {
-  position: relative;
-}
-
-.Service .Services .owl-carousel .item .inner {
-  text-align: center;
-  background: #eff3f5;
-  height: 300px;
-  padding: 0 20px;
-  border-radius: 5px;
-  width: 230px;
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-}
-
-.Service .Services .owl-carousel .item .inner:hover {
-  background: #2eb3b7;
-  color: #fff;
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-}
-
-.Service .Services .owl-carousel .item .inner:hover button {
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-  background-color: #fff;
-  color: #2eb3b7;
-}
-
-.Service .Services .owl-carousel .item .inner img {
-  width: 80px;
-  margin: 20px 0;
-}
-
-.Service .Services .owl-carousel .item .inner button {
-  padding: 5px 20px;
-  border: none;
-  background: #2eb3b7;
-  color: #fff;
-  border-radius: 25px;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  outline: none;
-  padding: 5px 20px;
-  border: 1px solid #2eb3b7;
-}
-
-@media all and (max-width: 769px) {
-  .Service .Services .owl-carousel .item .inner {
-    width: 280px;
-  }
-}
-
-.Service .Services .owl-carousel .owl-next, .Service .Services .owl-carousel .owl-prev {
-  position: absolute;
-  top: 50%;
-  right: -4%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: #fff !important;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 5px 0 grey;
-          box-shadow: 0 0 5px 0 grey;
-  color: #000;
-  outline: none;
-}
-
-.Service .Services .owl-carousel .owl-next span, .Service .Services .owl-carousel .owl-prev span {
-  font-size: 20px;
-}
-
-.Service .Services .owl-carousel .owl-next:hover span, .Service .Services .owl-carousel .owl-prev:hover span {
-  color: #000;
-}
-
-.Service .Services .owl-carousel .owl-prev {
-  left: -4%;
-}
-/*# sourceMappingURL=Service.css.map */
+/*# sourceMappingURL=Terms.css.map */

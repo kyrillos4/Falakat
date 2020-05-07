@@ -70,6 +70,7 @@
             }
         }
     }
+
     .HeaderBottom{
         background: url('https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bottom.svg');
         background-size: cover;
@@ -109,10 +110,16 @@
             p{color:$Grey}
             h3{
                 margin: 30px 0;
+                @media all and (max-width:769px) {
+                    font-size: 20px;
+                }
             }
             .subInfo{
                 h4{
                     font-size: 20px;
+                    @media all and (max-width:769px){
+                        font-size: 18px;
+                    }
                 }
                 p{
                     color: $Grey;
