@@ -38,6 +38,9 @@
         .Questions{
             padding-bottom: 25px;
             border-bottom: 1px solid #ddd;
+            h4{
+                margin-bottom:30px;
+            }
             .card-header{
                 .btn{
                     color:$DarkGreen !important;

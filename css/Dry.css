@@ -52,6 +52,7 @@ footer .Tags .tag {
   font-size: .8125rem;
   font-weight: 700;
   width: 160px;
+  cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -237,6 +238,10 @@ footer .bottomFooter .right .colored:hover {
 .Dry .Prices .Questions {
   padding-bottom: 25px;
   border-bottom: 1px solid #ddd;
+}
+
+.Dry .Prices .Questions h4 {
+  margin-bottom: 30px;
 }
 
 .Dry .Prices .Questions .card-header .btn {

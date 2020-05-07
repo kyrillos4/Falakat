@@ -24,4 +24,9 @@
             @include Carousel();
         }
     }
+    .Details{
+        h1{
+            margin: 20px 0;
+        }
+    }
 }

@@ -52,6 +52,7 @@ footer .Tags .tag {
   font-size: .8125rem;
   font-weight: 700;
   width: 160px;
+  cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -292,5 +293,9 @@ footer .bottomFooter .right .colored:hover {
 
 .Service .Services .owl-carousel .owl-prev {
   left: -4%;
+}
+
+.Service .Details h1 {
+  margin: 20px 0;
 }
 /*# sourceMappingURL=Service.css.map */
