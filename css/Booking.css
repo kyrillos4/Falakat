@@ -725,6 +725,10 @@ footer .bottomFooter .right .colored:hover {
   padding: 10px;
 }
 
+.Frequancy .Errors {
+  display: none;
+}
+
 /*****************End Style Frequancy********************/
 /*Styled model */
 .modal ul li {

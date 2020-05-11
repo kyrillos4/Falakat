@@ -17,16 +17,29 @@ $('.owl-carousel').owlCarousel({
 });
 
 /****************SCript Questions in Booking Page *****************/
+// Array of Results of all questions 
+var AnswersBooking = [];
+
 $('.Details .inner button').click(function(){
-    if($('.Details .inner').last().css('display') == 'none'){
-        $(this).parent().fadeOut(function(){
-            $(this).next().fadeIn().css('display' , 'flex');
-            $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
-            $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current')
-        });
-    }else{
-        $('.inner button').text('Done');
+    if($('.city').data('class')){
+        $('.city').parent().next().fadeOut();
+        if($('.Details .inner').last().css('display') == 'none'){
+            $('.city').parent().next().fadeOut();
+            AnswersBooking[0] = $('.city').data('class');
+            console.log(AnswersBooking)
+            $(this).parent().fadeOut(function(){
+                $(this).next().fadeIn().css('display' , 'flex');
+                $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
+                $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
+            });
+        } else{
+            $('.inner button').text('Done');
+        }
+    } else{
+        $('.city').parent().next().fadeIn();
     }
+    
+
 });
 
 //Mode in Select Country in Booking page
@@ -34,13 +47,12 @@ $('.Details .inner button').click(function(){
     for(let i = 0 ; i < $('.modal ul li').length; i++){
         $('.modal ul li:eq('+i+')').click(function(){
             $('.city').text($(this).text());
+            $('.city').attr('data-class',$(this).text());
             $('.fade').removeClass('show').css('display' , 'none');
-            $('body').removeClass('modal-open')
+            $('body').removeClass('modal-open').css('padding' , '0');
         })
     }
 })();
-
-
 
 //All Questions and answers  in Dry Page 
 let Questions = [
@@ -79,7 +91,6 @@ let Answers = [
         //Function to loop all Questions and answers 
 (function(){
     for(let i = 0 ; i < Questions.length ; i++){
-        console.log('Ques')
         $('.questionsBlock').append(`
         <div class="card " data-toggle="collapse" data-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">
         <div class="card-header" id="headingOne">
@@ -102,7 +113,6 @@ let Answers = [
 
 
 // Data Picker in Booking page
-//Date and time picker 
 $(".form_datetime").datetimepicker({
     format: "dd MM yyyy - HH:ii P",
     showMeridian: true,
