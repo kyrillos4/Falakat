@@ -468,6 +468,8 @@ footer .bottomFooter .right .colored:hover {
 }
 
 .Frequancy .Details .inner {
+  min-height: 35%;
+  max-height: 100%;
   padding: 20px 25px;
   position: relative;
   display: -webkit-box;
@@ -634,7 +636,7 @@ footer .bottomFooter .right .colored:hover {
   transition: all .4s ease-in-out;
   outline: none;
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   right: 5%;
   transition: all .4s ease-in-out;
 }
@@ -647,6 +649,10 @@ footer .bottomFooter .right .colored:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.Frequancy .Details .Back {
+  left: 5%;
 }
 
 .Frequancy .Details .Times {
@@ -669,7 +675,7 @@ footer .bottomFooter .right .colored:hover {
   margin: 25px 0;
 }
 
-.Frequancy .Details .Times .number {
+.Frequancy .Details .Times .numbers .number {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -689,7 +695,7 @@ footer .bottomFooter .right .colored:hover {
   transition: all .5s ease-in-out;
 }
 
-.Frequancy .Details .Times .number:hover {
+.Frequancy .Details .Times .numbers .number:hover {
   background: #2eb3b7;
   color: #fff;
   -webkit-transition: all .5s ease-in-out;
@@ -714,6 +720,14 @@ footer .bottomFooter .right .colored:hover {
   color: #fff;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+}
+
+.Frequancy .Details .Times .active {
+  background: #2eb3b7;
+  color: #fff;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  text-align: center;
 }
 
 .Frequancy .Details .Times textarea {
@@ -743,6 +757,10 @@ footer .bottomFooter .right .colored:hover {
 .modal ul li:hover {
   background: #2eb3b7;
   color: #fff;
+}
+
+#myMap {
+  height: 400px;
 }
 
 /* NOTE -----> Style footer and Navbar in GlobalSTyles File */

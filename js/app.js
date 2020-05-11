@@ -18,28 +18,90 @@ $('.owl-carousel').owlCarousel({
 
 /****************SCript Questions in Booking Page *****************/
 // Array of Results of all questions 
-var AnswersBooking = [];
+var AnswersBooking = [
+    //Default Value 
+    {"City" :'Dubai'},
+    {'How often do you need your cleaner?' :'one-time'},
+    {'How many hours do you need your cleaner to stay?' : '2'},
+    {'How many cleaners do you need?': '1'},
+    {'Do you require cleaning materials?' : 'Yes'},
+    {"Do you have any specific instructions?" : 'Empty'}
 
-$('.Details .inner button').click(function(){
+];
+
+$('.Details .inner .Next:eq(0)').click(function(){
+    // validation for City 
     if($('.city').data('class')){
+        AnswersBooking[0] = {"City" : $('.city').data('class')};
+        AnswersBooking[1] = {'How often do you need your cleaner?' : $(".inner input[name='radio']:checked").val()}
+        //fadeout err message of city        
         $('.city').parent().next().fadeOut();
-        if($('.Details .inner').last().css('display') == 'none'){
-            $('.city').parent().next().fadeOut();
-            AnswersBooking[0] = $('.city').data('class');
-            console.log(AnswersBooking)
-            $(this).parent().fadeOut(function(){
-                $(this).next().fadeIn().css('display' , 'flex');
-                $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
-                $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
-            });
-        } else{
-            $('.inner button').text('Done');
-        }
+        //move to next question
+        $(this).parent().fadeOut(function(){
+            $(this).next().fadeIn();
+            $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
+            $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
+        });
     } else{
         $('.city').parent().next().fadeIn();
     }
-    
+});
 
+/****************second Question**********/
+//part one
+$('.Hours .number').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    $(this).parentsUntil('Hours').attr('data-value' , $(this).text());
+    AnswersBooking[2] = {'How many hours do you need your cleaner to stay?' : $('.Hours').attr('data-value')}
+});
+//part two
+$('.Cleaners .number').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    $(this).parentsUntil('Cleaners').attr('data-value' , $(this).text());
+    AnswersBooking[3] = {'How many cleaners do you need?': $('.Cleaners').attr('data-value')}
+});
+//part Three
+$('.Materials .approve').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    $(this).parentsUntil('Materials').attr('data-value' , $(this).attr('data-value'));
+    AnswersBooking[4] = {'Do you require cleaning materials?' : $('.Materials').attr('data-value')}
+});
+//part fout textarea
+$('textarea').change(function(){
+    AnswersBooking[5] = {"Do you have any specific instructions?" : $(this).val()}
+})
+//Move to Thid Question with validation
+$('.Details .inner .Next:eq(1)').click(function(){
+    if($('.Hours').data('value') > 9){
+        alert('please Choose correct Hours From Shown Hours ');
+    }else if($('.Cleaners').data('value') > 4){
+        alert('Please Chosse correct Number of Cleaner ');
+    }else{
+    $(this).parent().fadeOut(function(){
+        $(this).next().fadeIn();
+        $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
+        $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
+    });
+    }
+});
+$('.Details .inner .Next:eq(2)').click(function(){
+    const date = new Date;
+    console.log(date.toDateString())
+    if($('.date input').val()){
+        // data-toggle="modal" data-target="#MapModel"
+        $(this).attr('data-toggle' , 'modal').attr('data-target' , '#MapModel');
+        $('.Errors:eq(1)').css('display' , 'none');
+    }else{
+        $('.Errors:eq(1)').css('display' , 'block');
+    }
+});
+// function back button in Question Booking page
+$('.Details .inner .Back').click(function(){
+    $(this).parent().fadeOut(function(){
+        $('.'+$(this).prev().data('class') +'').removeClass('--completed').addClass('--current');
+        $('.'+$(this).data('class') +'').removeClass('--current').addClass('--pending');
+        $(this).prev().fadeIn();
+    })
 });
 
 //Mode in Select Country in Booking page
@@ -117,5 +179,6 @@ $(".form_datetime").datetimepicker({
     format: "dd MM yyyy - HH:ii P",
     showMeridian: true,
     autoclose: true,
-    todayBtn: true
+    todayBtn: true,
+    startDate:true
 });

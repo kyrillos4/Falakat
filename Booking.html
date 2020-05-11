@@ -7,6 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYnSvRAQ6585QRuRh0mMxYmW06yNbqLxE"></script>
     <link rel="stylesheet" href="css/Booking.css">
 </head>
 <body>
@@ -96,28 +97,28 @@
                                 <h6>How often do you need your cleaner?</h6>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <input id="r1" type="radio" name="radio" value="1" checked>
+                                        <input class="Q1" id="r1" type="radio" name="radio" value="one-time" checked>
                                         <label for="r1">One-time</label>
                                         <p>Book a one-time cleaning</p>
                                     </li>
                                     <li>
-                                        <input id="r2" type="radio" name="radio" value="1">
+                                        <input class="Q1" id="r2" type="radio" name="radio" value="Every-two-weeks">
                                         <label for="r2">Every two weeks</label>
                                         <p>Book a one-time cleaning</p>
                                     </li>
                                     <li>
-                                        <input id="r3" type="radio" name="radio" value="1">
+                                        <input class="Q1" id="r3" type="radio" name="radio" value="Every-week">
                                         <label for="r3">Every week</label>
                                         <p>Book a one-time cleaning</p>
                                     </li>
                                 </ul>
-                                <button>Next</button>
+                                <button class='Next'>Next</button>
                             </div>
                             <div class="inner  " data-class="stepTwo">
-                                <div class="Times">
+                                <div class="Times Hours" data-value='2'>
                                     <h6>How many hours do you need your cleaner to stay?</h6>
                                     <div class="numbers d-flex justify-content-center align-items-center">
-                                        <div class="number">2</div>
+                                        <div class="number active">2</div>
                                         <div class="number">3</div>
                                         <div class="number">4</div>
                                         <div class="number">5</div>
@@ -127,37 +128,39 @@
                                         <div class="number">9</div>
                                     </div>
                                 </div>
-                                <div class="Times">
+                                <div class="Times Cleaners" data-value="1">
                                     <h6>How many cleaners do you need?</h6>
                                     <div class="numbers d-flex justify-content-center align-items-center">
-                                        <div class="number">1</div>
+                                        <div class="number active">1</div>
                                         <div class="number">2</div>
                                         <div class="number">3</div>
                                         <div class="number">4</div>
                                     </div>
                                 </div>
-                                <div class="Times">
+                                <div class="Times Materials" data-value="Yes">
                                     <h6>Do you require cleaning materials?</h6>
                                     <div class="numbers d-flex justify-content-center align-items-center">
-                                        <div class="approve">yes Please</div>
-                                        <div class="approve">No, I have theme </div>
+                                        <div class="approve active d-flex justify-content-center" data-value="Yes">yes Please</div>
+                                        <div class="approve d-flex justify-content-center" data-value="No">No, I have theme </div>
                                     
                                     </div>
                                 </div>
-                                <div class="Times">
+                                <div class="Times Message" data-value="Empty">
                                     <h6>Do you have any specific instructions?</h6>
-                                    <textarea name="" id="" placeholder="Example:window Cleaing"></textarea>
+                                    <textarea name="" id="" placeholder="Example: window Cleaing"></textarea>
                                 </div>
-                                <button>Next</button>
+                                <button class='Next'>Next</button>
+                                <button class="Back">Back</button>
                             </div>
                             <div class="inner" data-class="stepThree">
                                 <h6>Please Choose Data & Time</h6>
-                                <div class=" date input-append date form_datetime add-on" data-date="">
+                                <div class=" date input-append date form_datetime add-on" data-date="" startDate='0'>
                                     <input size="16" type="text" value="" readonly placeholder="Choose Date And Time">
                                     <span class="add-on"><i class="icon-th"></i></span>
-                                    <!-- <span class="nameErr">Please Choose Date And Time </span> -->
+                                    <span class="Errors text-danger font-weight-bold">Please Choose Date </span>                                    <span></span>
                                 </div>
-                                <button data-toggle="modal" data-target="#MapModel">Next</button>
+                                <button  class="Next">Next</button>
+                                <button class="Back">Back</button>
                             </div>
                         </div>
                     </div>
@@ -328,7 +331,10 @@
             </button>
             </div>
             <div class="modal-body">
-                Map Here 
+                <div id="myMap"></div>
+                <input id="address" type="text" class="form-group" /><br/>
+                <input type="text" id="latitude"  class="form-group" placeholder="Latitude"/>
+                <input type="text" id="longitude"class="form-group"  placeholder="Longitude"/>
             </div>
             <div class="modal-footer d-flex justify-content-center  ">
             <button type="button" class="btn btn-primary">Continue</button>
@@ -346,6 +352,7 @@
         new WOW().init();
     </script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/MapScript.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -283,6 +283,8 @@
     }
     .Details{
         .inner{
+            min-height: 35%;
+            max-height: 100%;
             padding: 20px 25px;
             position: relative;
             @include FlexBox();
@@ -404,7 +406,7 @@
         button{
             @include Button();
             position:absolute;
-            bottom:5%;
+            bottom:0%;
             right: 5%;
             transition: all .4s ease-in-out;
             &:hover{
@@ -414,13 +416,17 @@
         .active{
             display: flex;
         }
+        .Back{
+            left: 5%;
+        }
         //Second Questions
         .Times{
             @include FlexBox();
             flex-direction: column;
             align-items: flex-start;
             margin: 25px 0;
-            .number{
+            .numbers{
+              .number{
                 width:30px;
                 height:30px;
                 border-radius:50%;
@@ -434,6 +440,7 @@
                     color:$white;
                     transition:all .5s ease-in-out;
                 }
+              }
             }
             .approve{
                 width:150px;
@@ -450,6 +457,12 @@
                     color:$white;
                     transition:all .5s ease-in-out;
                 }
+            }
+            .active{
+              background:$Sky;
+              color:$white;
+              transition:all .5s ease-in-out;
+              text-align:center;
             }
             textarea{
                 width: 500px;
@@ -485,7 +498,10 @@
     }
 }
 
-
+//Model of Map 
+#myMap {
+  height: 400px;
+}
 /* NOTE -----> Style footer and Navbar in GlobalSTyles File */
 
 //Date Picker Style
