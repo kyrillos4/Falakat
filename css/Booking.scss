@@ -397,7 +397,7 @@
                     margin:15px 0 ;
                     width:450px;
                     @media all and (max-width:769px) {
-                        width:290px;
+                        width:220px;
                         margin-bottom:40px;
                     } 
                 }
@@ -471,6 +471,9 @@
                 resize: none;
                 border:1px solid #ddd;
                 padding: 10px;
+                @media all and (max-width:769px){
+                  width:100%;
+                }
             }
         }
     }
@@ -511,9 +514,42 @@
 }
 //Map Model 
 .mapModel{
+  position: relative;
   .modal-footer{
     button{
       @include Button();  
     }
   }
+  .modal-body{
+    #myMap{
+      margin-bottom:15px;
+    }
+    .gmnoprint{
+      display: none;
+    }
+    #searchInput{
+      // position: absolute;
+      // top:5%;
+      // left: 50%;
+      // transform: translateX(-50%);
+      top:10px !important;
+      width:70%;
+      padding:5px 10px ;
+      border: none;
+      outline: none;
+      box-shadow:0 0 5px 0 #ddd;
+      border-radius:5px;
+      height:30px;
+    }
+    .details{
+      .DetailsBlock{
+        margin: 0 10px;
+        input{
+          font-size:14px;
+        }
+      }
+
+    }
+  }
+
 }

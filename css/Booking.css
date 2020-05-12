@@ -621,7 +621,7 @@ footer .bottomFooter .right .colored:hover {
 
 @media all and (max-width: 769px) {
   .Frequancy .Details .inner .date input {
-    width: 290px;
+    width: 220px;
     margin-bottom: 40px;
   }
 }
@@ -739,6 +739,12 @@ footer .bottomFooter .right .colored:hover {
   padding: 10px;
 }
 
+@media all and (max-width: 769px) {
+  .Frequancy .Details .Times textarea {
+    width: 100%;
+  }
+}
+
 .Frequancy .Errors {
   display: none;
 }
@@ -769,6 +775,10 @@ footer .bottomFooter .right .colored:hover {
   top: 403.281px !important;
 }
 
+.mapModel {
+  position: relative;
+}
+
 .mapModel .modal-footer button {
   padding: 5px 20px;
   border: none;
@@ -778,5 +788,33 @@ footer .bottomFooter .right .colored:hover {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   outline: none;
+}
+
+.mapModel .modal-body #myMap {
+  margin-bottom: 15px;
+}
+
+.mapModel .modal-body .gmnoprint {
+  display: none;
+}
+
+.mapModel .modal-body #searchInput {
+  top: 10px !important;
+  width: 70%;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0 0 5px 0 #ddd;
+          box-shadow: 0 0 5px 0 #ddd;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.mapModel .modal-body .details .DetailsBlock {
+  margin: 0 10px;
+}
+
+.mapModel .modal-body .details .DetailsBlock input {
+  font-size: 14px;
 }
 /*# sourceMappingURL=Booking.css.map */

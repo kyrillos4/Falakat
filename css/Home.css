@@ -9,6 +9,16 @@ a {
   border-bottom: 1px solid #eee;
 }
 
+.upperNav .logo img {
+  width: 150px;
+}
+
+@media all and (max-width: 769px) {
+  .upperNav .logo img {
+    width: 100%;
+  }
+}
+
 .upperNav .login img {
   margin: 0 10px;
 }
@@ -220,6 +230,16 @@ footer .bottomFooter .right .colored:hover {
 
 .Header .upperNav {
   padding: 20px 0;
+}
+
+.Header .upperNav .logo img {
+  width: 150px;
+}
+
+@media all and (max-width: 769px) {
+  .Header .upperNav .logo img {
+    width: 100%;
+  }
 }
 
 .Header .upperNav .login img {

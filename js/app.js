@@ -87,6 +87,7 @@ $('.Details .inner .Next:eq(1)').click(function(){
 $('.Details .inner .Next:eq(2)').click(function(){
     const date = new Date;
     console.log(date.toDateString())
+    console.log(AnswersBooking)
     if($('.date input').val()){
         // data-toggle="modal" data-target="#MapModel"
         $(this).attr('data-toggle' , 'modal').attr('data-target' , '#MapModel');
@@ -172,7 +173,6 @@ let Answers = [
         `)
     }
 })();
-
 
 // Data Picker in Booking page
 $(".form_datetime").datetimepicker({
