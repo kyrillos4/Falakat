@@ -524,6 +524,7 @@
     #myMap{
       margin-bottom:15px;
     }
+
     .gmnoprint{
       display: none;
     }
@@ -552,4 +553,7 @@
     }
   }
 
+}
+.pac-container{
+  z-index: 99999 !important;
 }

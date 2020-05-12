@@ -5,7 +5,6 @@ let myLatlng = new google.maps.LatLng(24.466617534719116,54.36866526468188);
 let geocoder = new google.maps.Geocoder();
 let infowindow = new google.maps.InfoWindow();
 
-
 //initialize Map
 function initialize(){
     const mapOptions = {

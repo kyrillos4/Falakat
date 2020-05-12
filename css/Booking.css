@@ -817,4 +817,8 @@ footer .bottomFooter .right .colored:hover {
 .mapModel .modal-body .details .DetailsBlock input {
   font-size: 14px;
 }
+
+.pac-container {
+  z-index: 99999 !important;
+}
 /*# sourceMappingURL=Booking.css.map */
