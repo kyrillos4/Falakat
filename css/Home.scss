@@ -142,37 +142,6 @@
 
 /* NOTE -----> Style footer in GlobalSTyles File */
 
-/*********************Start Model Style*******************/
-.modal{
-    .modal-content{
-        max-width:400px;
-    }
-    .modal-body{
-        form{
-            h6{
-                color:$Grey;
-                font-weight: 600;
-                text-transform: uppercase;
-                font-size: 13px;
-            }
-            .group{
-                border: 1px solid #eee;
-                border-radius: 5px;
-                padding:10px;
-                input{
-                    border: none;
-                    outline: none;
-                }
-            }
-        }
-    }
-    .modal-footer{
-        @include FlexBox();
-        .btn{
-            @include Button();
-            width: 150px;
-        }
-    }
-}
+/*********************Login styled from GlobalStyle file *******************/
 
-/*********************End End Style*******************/
+

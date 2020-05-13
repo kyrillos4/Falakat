@@ -278,162 +278,84 @@ footer .bottomFooter .right .colored:hover {
   display: none;
 }
 
-/************************Start Style Dry Service*********************/
-.Dry {
-  /*Note ---> header Styled from GlobalStyle */
-  /*Style Carousel */
-}
-
-.Dry .headerService {
-  background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/images/uploads/services/1541948248laundry.png");
-  background-position: center left;
-}
-
-.Dry .Prices {
-  /*Style Questions Part */
-}
-
-.Dry .Prices table {
-  width: 100%;
-  border: 1px solid #eee;
-  -webkit-box-shadow: 0 0 5px 0 #797777;
-          box-shadow: 0 0 5px 0 #797777;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  margin: 30px 0;
-}
-
-.Dry .Prices table tr {
-  border: 1px solid #0000004d;
-}
-
-.Dry .Prices table tr td, .Dry .Prices table tr th {
-  border: 1px solid #0000004d;
-  padding: 15px;
-}
-
-.Dry .Prices .bags {
-  border-bottom: 1px solid #ddd;
-  margin: 30px 0;
-}
-
-.Dry .Prices .Questions {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ddd;
-}
-
-.Dry .Prices .Questions h4 {
-  margin-bottom: 30px;
-}
-
-.Dry .Prices .Questions .card-header .btn {
-  color: #132a2f !important;
-  font-weight: 500;
-}
-
-.Dry .Prices .Questions .card-header .btn:hover {
-  text-decoration: none;
-}
-
-.Dry .Prices .Questions .card-body {
-  color: grey;
-}
-
-.Dry .Services {
-  margin: 30px 0;
-}
-
-.Dry .Services .title h6 {
-  color: #797777;
-  font-size: 13px;
-}
-
-.Dry .Services .title h1 {
-  font-size: 22px;
-  margin: 10px 0 35px 0;
-}
-
-.Dry .Services .owl-carousel {
-  position: relative;
-}
-
-.Dry .Services .owl-carousel .item .inner {
-  text-align: center;
-  background: #eff3f5;
-  height: 300px;
-  padding: 0 20px;
-  border-radius: 5px;
-  width: 230px;
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-}
-
-.Dry .Services .owl-carousel .item .inner:hover {
-  background: #2eb3b7;
+.Frequancy .details .left .inner .active {
   color: #fff;
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-}
-
-.Dry .Services .owl-carousel .item .inner:hover button {
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
-  background-color: #fff;
-  color: #2eb3b7;
-}
-
-.Dry .Services .owl-carousel .item .inner img {
-  width: 80px;
-  margin: 20px 0;
-}
-
-.Dry .Services .owl-carousel .item .inner button {
-  padding: 5px 20px;
-  border: none;
   background: #2eb3b7;
-  color: #fff;
-  border-radius: 25px;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  outline: none;
-  padding: 5px 20px;
   border: 1px solid #2eb3b7;
 }
 
+.Frequancy .details .left .inner .type, .Frequancy .details .left .inner .Size-Type {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.Frequancy .details .left .inner .type span, .Frequancy .details .left .inner .Size-Type span {
+  padding: 3px 10px;
+  border: 1px solid #797777;
+  margin-top: 5px;
+  border-radius: 25px;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+.Frequancy .details .left .inner .type span:hover, .Frequancy .details .left .inner .Size-Type span:hover {
+  color: #fff;
+  background: #2eb3b7;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: 1px solid #2eb3b7;
+}
+
+.Frequancy .details .left .inner .NRooms {
+  margin: 15px 0;
+}
+
+.Frequancy .details .left .inner .NRooms .ApartOpt, .Frequancy .details .left .inner .NRooms .VillaOpt {
+  margin: 10px 0;
+}
+
+.Frequancy .details .left .inner .NRooms .ApartOpt span, .Frequancy .details .left .inner .NRooms .VillaOpt span {
+  padding: 3px 10px;
+  border: 1px solid #797777;
+  margin-top: 5px;
+  border-radius: 25px;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  width: auto;
+}
+
+.Frequancy .details .left .inner .NRooms .ApartOpt span:hover, .Frequancy .details .left .inner .NRooms .VillaOpt span:hover {
+  color: #fff;
+  background: #2eb3b7;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: 1px solid #2eb3b7;
+}
+
+.Frequancy .details .left .inner .NRooms .VillaOpt {
+  display: none;
+}
+
+.Frequancy .details .left .inner .msg textarea {
+  width: 500px;
+  border-radius: 5px;
+  height: 150px;
+  resize: none;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
 @media all and (max-width: 769px) {
-  .Dry .Services .owl-carousel .item .inner {
-    width: 280px;
+  .Frequancy .details .left .inner .msg textarea {
+    width: 100%;
   }
 }
-
-.Dry .Services .owl-carousel .owl-next, .Dry .Services .owl-carousel .owl-prev {
-  position: absolute;
-  top: 50%;
-  right: -4%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: #fff !important;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 5px 0 grey;
-          box-shadow: 0 0 5px 0 grey;
-  color: #000;
-  outline: none;
-}
-
-.Dry .Services .owl-carousel .owl-next span, .Dry .Services .owl-carousel .owl-prev span {
-  font-size: 20px;
-}
-
-.Dry .Services .owl-carousel .owl-next:hover span, .Dry .Services .owl-carousel .owl-prev:hover span {
-  color: #000;
-}
-
-.Dry .Services .owl-carousel .owl-prev {
-  left: -4%;
-}
-
-/************************End Style Dry Service*********************/
-/*# sourceMappingURL=Dry.css.map */
+/*# sourceMappingURL=DeepBooking.css.map */

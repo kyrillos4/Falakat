@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYnSvRAQ6585QRuRh0mMxYmW06yNbqLxE&libraries=places"></script>
     <link rel="stylesheet" href="css/Booking.css">
+    <link rel="stylesheet" href="css/DeepBooking.css">
 </head>
 <body>
     <!-------------Start Booking Page------------------->
@@ -41,7 +42,7 @@
                 <div class="d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalCenter"><h6 class="city"  >Emirate</h6><i class="fas fa-chevron-down"></i></div>
                 <span class="Errors text-danger font-weight-bold">Please Choose City</span>
             </div>
-            <h1 class="text-center">Frequency</h1>
+            <h1 class="text-center">Deep Cleaning </h1>
             <!--Start Steps Dots -->
             <div class="booking-steps">
                 <button class="step --current stepOne">
@@ -49,7 +50,7 @@
                     <span class="step-number">1</span>
                     <span class="step-check fa fa-check"></span>
                   </span>
-                  <span class="step-label">Frequency</span>
+                  <span class="step-label">Service Details</span>
                   <span class="step-arrow"></span> 
                 </button>
                 
@@ -58,7 +59,7 @@
                     <span class="step-number">2</span>
                     <span class="step-check fa fa-check"></span>
                   </span>
-                  <span class="step-label">Service Details</span>
+                  <span class="step-label">Date & Time</span>
                   <span class="step-arrow"></span> 
                 </button>
                 
@@ -67,7 +68,7 @@
                     <span class="step-number">3</span>
                     <span class="step-check fa fa-check"></span>
                   </span>
-                  <span class="step-label">Date & Time</span>
+                  <span class="step-label">Address</span>
                   <span class="step-arrow"></span> 
                 </button>
                 
@@ -76,85 +77,54 @@
                     <span class="step-number">4</span>
                     <span class="step-check fa fa-check"></span>
                   </span>
-                  <span class="step-label">Address</span>
-                  <span class="step-arrow"></span> 
-                </button>
-                
-                <button class="step --pending stepFive">
-                  <span class="step-position">
-                    <span class="step-number">5</span>
-                    <span class="step-check fa fa-check"></span>
-                  </span>
                   <span class="step-label">Payment</span>
                   <span class="step-arrow"></span> 
                 </button>
               </div>
             <!--Start Bookgin Details -->
-            <div class="details Details">
+            <div class="details">
                 <div class="row">
                     <div class="col-12 col-md-8">
                         <div class="left">
                         <!--Question-->
                             <div class="inner active" data-class="stepOne">
-                                <h6>How often do you need your cleaner?</h6>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <input class="Q1" id="r1" type="radio" name="radio" value="one-time" checked>
-                                        <label for="r1">One-time</label>
-                                        <p>Book a one-time cleaning</p>
-                                    </li>
-                                    <li>
-                                        <input class="Q1" id="r2" type="radio" name="radio" value="Every-two-weeks">
-                                        <label for="r2">Every two weeks</label>
-                                        <p>Book a one-time cleaning</p>
-                                    </li>
-                                    <li>
-                                        <input class="Q1" id="r3" type="radio" name="radio" value="Every-week">
-                                        <label for="r3">Every week</label>
-                                        <p>Book a one-time cleaning</p>
-                                    </li>
-                                </ul>
+                                <div class="instrac">
+                                    <ul class="list-unstyled">
+                                        <li>- Recommended for new houses & apartments</li>
+                                        <li>- Thorough sanitation & disinfection of all the areas including inside cabinets</li>
+                                        <li>- Pressure vacuuming and removal of grease & oil stains by a special deep cleaning team</li>
+                                        <li>- Floor scrubbing with professional cleaning equipment</li>
+                                    </ul>
+                                </div>
+                                <div class="type">
+                                    <h6>Type of home</h6>
+                                    <span class="active" data-class=".ApartOpt">Apartment</span>
+                                    <span data-class=".VillaOpt">Villa</span>
+                                </div>
+                                <div class="NRooms">
+                                    <h6>Number of bedrooms?</h6>
+                                    <div>
+                                        <div class="ApartOpt">
+                                            <span class="active">Studio (AED 500)</span>
+                                            <span>1BR (AED 700)</span>
+                                            <span>2BR (AED 900)</span>
+                                            <span>3BR (AED 1100)</span>
+                                        </div>
+                                        <div class="VillaOpt">
+                                            <span class="active">1BR (AED 900)</span>
+                                            <span>2BR (AED 1200)</span>
+                                            <span>3BR (AED 1500)</span>
+                                            <span>4BR (AED 1800)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="msg">
+                                    <h6>Do you have any specific cleaning instructions?</h6>
+                                    <textarea name="message" id="msg"></textarea>
+                                </div>
                                 <button class='Next'>Next</button>
                             </div>
-                            <div class="inner  " data-class="stepTwo">
-                                <div class="Times Hours" data-value='2'>
-                                    <h6>How many hours do you need your cleaner to stay?</h6>
-                                    <div class="numbers d-flex justify-content-center align-items-center flex-wrap">
-                                        <div class="number active">2</div>
-                                        <div class="number">3</div>
-                                        <div class="number">4</div>
-                                        <div class="number">5</div>
-                                        <div class="number">6</div>
-                                        <div class="number">7</div>
-                                        <div class="number">8</div>
-                                        <div class="number">9</div>
-                                    </div>
-                                </div>
-                                <div class="Times Cleaners" data-value="1">
-                                    <h6>How many cleaners do you need?</h6>
-                                    <div class="numbers d-flex justify-content-center align-items-center">
-                                        <div class="number active">1</div>
-                                        <div class="number">2</div>
-                                        <div class="number">3</div>
-                                        <div class="number">4</div>
-                                    </div>
-                                </div>
-                                <div class="Times Materials" data-value="Yes">
-                                    <h6>Do you require cleaning materials?</h6>
-                                    <div class="numbers d-flex justify-content-center align-items-center">
-                                        <div class="approve active d-flex justify-content-center" data-value="Yes">yes Please</div>
-                                        <div class="approve d-flex justify-content-center" data-value="No">No, I have theme </div>
-                                    
-                                    </div>
-                                </div>
-                                <div class="Times Message" data-value="Empty">
-                                    <h6>Do you have any specific instructions?</h6>
-                                    <textarea name="" id="" placeholder="Example: window Cleaing"></textarea>
-                                </div>
-                                <button class='Next'>Next</button>
-                                <button class="Back">Back</button>
-                            </div>
-                            <div class="inner" data-class="stepThree">
+                            <div class="inner" data-class="stepTwo">
                                 <h6>Please Choose Data & Time</h6>
                                 <div class=" date input-append date form_datetime add-on" data-date="" startDate='0'>
                                     <input size="16" type="text" value="" readonly placeholder="Choose Date And Time">
@@ -414,6 +384,6 @@
     </script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/MapScript.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/DeepService.js"></script>
 </body>
 </html>

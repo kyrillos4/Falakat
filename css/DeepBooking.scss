@@ -1,0 +1,76 @@
+////Colors 
+@import 'Colors';
+//functions 
+@import 'Functions';
+//Global style
+@import 'GlobalStyle';
+
+// almost style from Bookgin css if you wanna change some thing not here you can change it from there 
+
+//select option function
+@mixin Option {
+    padding: 3px 10px;
+    border: 1px solid $Grey;
+    margin-top: 5px;
+    border-radius: 25px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        color: $white;
+        background: $Sky;
+        transition: all .4s ease-in-out;
+        border: 1px solid $Sky;
+    }
+}
+
+
+.Frequancy{
+    .details{
+        .left{
+            .inner{
+                //active class
+                .active{
+                    color: $white;
+                    background: $Sky;
+                    border: 1px solid $Sky;
+                }
+                .type , .Size-Type{
+                    span{
+                        @include Option();
+                    }
+                    width: 100%;
+                    padding: 5px 0;
+                }
+                .NRooms{
+                    margin:15px 0;
+                    .ApartOpt , .VillaOpt{
+                        margin: 10px 0;
+                        span{
+                            @include Option();
+                            width: auto;
+                        }
+                    }
+                    .VillaOpt{
+                        display: none;
+                    }
+                }
+                .msg{
+                    textarea{
+                        width: 500px;
+                        border-radius:5px;
+                        height: 150px;
+                        resize: none;
+                        border:1px solid #ddd;
+                        padding: 10px;
+                        @media all and (max-width:769px){
+                          width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

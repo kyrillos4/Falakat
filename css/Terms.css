@@ -195,6 +195,89 @@ footer .bottomFooter .right .colored:hover {
 }
 
 /*************************End Service Page Style********** *************/
+/*********************Start Login Model Style*******************/
+#LoginModel .modal-content {
+  max-width: 400px;
+}
+
+#LoginModel .modal-body form h6 {
+  color: #797777;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+#LoginModel .modal-body form .group {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#LoginModel .modal-body form .group input {
+  border: none;
+  outline: none;
+}
+
+#LoginModel .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#LoginModel .modal-footer .btn {
+  padding: 5px 20px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  width: 150px;
+}
+
+/*********************End login Style*******************/
+/*Some style for Carprt service Bookgin */
+.carpet .left .Size-Type .size {
+  margin: 18px 0;
+}
+
+.carpet .left .Size-Type .size p {
+  margin: 0 15px !important;
+}
+
+.carpet .left .Size-Type .size input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  /* Chrome, Safari, Edge, Opera */
+}
+
+.carpet .left .Size-Type .size input::-webkit-outer-spin-button, .carpet .left .Size-Type .size input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+.carpet .left .Size-Type .size input:focus {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: 1px solid #2eb3b7;
+}
+
+.carpet .left .Size-Type .Err {
+  display: none;
+}
+
 .Terms {
   /*Note ---> header Styled from GlobalStyle */
   /*****************body style********************/

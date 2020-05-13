@@ -87,7 +87,21 @@ $('.Details .inner .Next:eq(1)').click(function(){
 $('.Details .inner .Next:eq(2)').click(function(){
     const date = new Date;
     console.log(date.toDateString())
-    console.log(AnswersBooking)
+    console.log(AnswersBooking);
+    //date validation
+    if($('.date input').val()){
+        // data-toggle="modal" data-target="#MapModel"
+        $(this).attr('data-toggle' , 'modal').attr('data-target' , '#MapModel');
+        $('.Errors:eq(1)').css('display' , 'none');
+    }else{
+        $('.Errors:eq(1)').css('display' , 'block');
+    }
+});
+$('.dry .inner .Next:eq(1)').click(function(){
+    const date = new Date;
+    console.log(date.toDateString())
+    console.log(AnswersBooking);
+    //date validation
     if($('.date input').val()){
         // data-toggle="modal" data-target="#MapModel"
         $(this).attr('data-toggle' , 'modal').attr('data-target' , '#MapModel');
@@ -180,5 +194,6 @@ $(".form_datetime").datetimepicker({
     showMeridian: true,
     autoclose: true,
     todayBtn: true,
-    startDate:true
+    startDate:true,
+    setDaysOfWeekDisabled:[2]
 });
