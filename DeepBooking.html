@@ -320,19 +320,21 @@
                     <div class="col-12 col-md-6">
                         <div class="DetailsBlock">
                             <!-- <label for="address">Building name / villa name:</label> -->
-                            <input id="BuildingName" type="text" class="form-control" placeholder="Building name / villa name" required /><br/>
+                            <input id="BuildingName" type="number" class="form-control" placeholder="Building Number / villa Number" required />
+                            <span class="text-danger font-weight-bold">Please Enter Building Number</span>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="DetailsBlock">
                             <!-- <label for="address">Building name / villa name:</label> -->
-                            <input id="AdditionalDirections" type="text" class="form-control" placeholder="Additional directions" required /><br/>
+                            <input id="Building" type="text" class="form-control" placeholder="Building name / villa name" required />
+                            <span class="text-danger font-weight-bold ">Please Enter Building Name</span>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="DetailsBlock">
                             <!-- <label for="address">Building name / villa name:</label> -->
-                            <input id="Building" type="text" class="form-control" placeholder="Building name / villa name" required /><br/>
+                            <input id="AdditionalDirections" type="text" class="form-control" placeholder="Additional directions" />
                         </div>
                     </div>
                 </div>
@@ -340,9 +342,17 @@
                 <input type="text" id="longitude"class="form-control d-none"  placeholder="Longitude"/>
             </div>
             <div class="modal-footer d-flex justify-content-center  ">
-            <button type="button" class="btn btn-primary">Continue</button>
+            <button type="button" class="btn btn-primary" id='MapContinue'>Continue</button>
             </div>
         </div>
+        </div>
+        <div class="ErrMessage">
+            <i class="fas fa-times"></i>
+            <div class="msg">
+                <h6><i class="fas fa-exclamation-triangle text-danger"></i>Error.</h6>
+                <p>We do not currently operate in this area.</p>
+            </div>
+            <span></span>
         </div>
     </div>
     <!------------------End Map Model ------------>

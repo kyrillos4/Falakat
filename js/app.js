@@ -190,10 +190,8 @@ let Answers = [
 
 // Data Picker in Booking page
 $(".form_datetime").datetimepicker({
-    format: "dd MM yyyy - HH:ii P",
+    format: "MM dd yyyy - HH:ii P",
     showMeridian: true,
     autoclose: true,
     todayBtn: true,
-    startDate:true,
-    setDaysOfWeekDisabled:[2]
 });

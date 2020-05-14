@@ -1,10 +1,25 @@
 //create variables 
 let map;
 let marker;
-let myLatlng = new google.maps.LatLng(24.466617534719116,54.36866526468188);
+let myLatlng = new google.maps.LatLng(25.2048, 55.2708);
 let geocoder = new google.maps.Geocoder();
 let infowindow = new google.maps.InfoWindow();
-
+let Cities = [
+    'Dubai',
+    'دبي',
+    'Abu Dhabi',
+    'أبو ظبي',
+    'Sharjah',
+    'الشارقة',
+    'Ajman',
+    'عجمان',
+    'Ras Al-Khaima',
+    'إمارة رأس الخيمة',
+    'Umm Al Quawain',
+    'ام القيوين',
+    'United Arab Emirates',
+    'الإمارات العربية المتحدة'
+]
 
 //initialize Map
 function initialize(){
@@ -94,7 +109,7 @@ function initialize(){
 //Change map when choose city 
 $('.cityModel ul li').click(function(){
     if($(this).text() === 'Dubai'){
-        myLatlng = new google.maps.LatLng(24.466617534719116,54.36866526468188);
+        myLatlng = new google.maps.LatLng(25.2048, 55.2708);
     }else if($(this).text() === 'Abu Dahbi'){
         myLatlng = new google.maps.LatLng(24.45384005117809,54.377343799999984);
     }else if($(this).text() === 'Sharjah'){
@@ -111,5 +126,28 @@ $('.cityModel ul li').click(function(){
 
     //call map function with new longitude and latitude
     initialize();
-})
+});
 
+//function to check if client location avaelable or not 
+$('#MapContinue').click(function(){
+    let Lat = $('#latitude').val();
+    let long = $('#longitude').val();
+    
+    // here call api using ajax with long and lat variable 
+
+    //check input filed 
+    for(let i = 0; i< $('.DetailsBlock input').length ; i++){
+        if($('.DetailsBlock input:eq('+i+')').val()){
+            console.log('value')
+            $('.DetailsBlock:eq('+i+') span').fadeOut();
+        }else{
+            $('.DetailsBlock:eq('+i+') span').fadeIn();
+        }
+    }
+});
+
+//Error Message Function
+$('.ErrMessage').first().click(function(){
+    console.log('close ')
+    $('.ErrMessage').fadeOut();
+});

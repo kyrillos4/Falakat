@@ -244,15 +244,15 @@ footer .bottomFooter .right .colored:hover {
 
 /*********************End login Style*******************/
 /*Some style for Carprt service Bookgin */
-.carpet .left .Size-Type .size {
+.carpet .left .Size-Type .size, .curtain .left .Size-Type .size {
   margin: 18px 0;
 }
 
-.carpet .left .Size-Type .size p {
+.carpet .left .Size-Type .size p, .curtain .left .Size-Type .size p {
   margin: 0 15px !important;
 }
 
-.carpet .left .Size-Type .size input {
+.carpet .left .Size-Type .size input, .curtain .left .Size-Type .size input {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 5px 10px;
@@ -262,19 +262,19 @@ footer .bottomFooter .right .colored:hover {
   /* Chrome, Safari, Edge, Opera */
 }
 
-.carpet .left .Size-Type .size input::-webkit-outer-spin-button, .carpet .left .Size-Type .size input::-webkit-inner-spin-button {
+.carpet .left .Size-Type .size input::-webkit-outer-spin-button, .carpet .left .Size-Type .size input::-webkit-inner-spin-button, .curtain .left .Size-Type .size input::-webkit-outer-spin-button, .curtain .left .Size-Type .size input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: textfield;
   margin: 0;
 }
 
-.carpet .left .Size-Type .size input:focus {
+.carpet .left .Size-Type .size input:focus, .curtain .left .Size-Type .size input:focus {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   border: 1px solid #2eb3b7;
 }
 
-.carpet .left .Size-Type .Err {
+.carpet .left .Size-Type .Err, .curtain .left .Size-Type .Err {
   display: none;
 }
 

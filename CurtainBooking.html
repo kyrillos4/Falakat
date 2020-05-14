@@ -82,7 +82,7 @@
                 </button>
               </div>
             <!--Start Bookgin Details -->
-            <div class="details">
+            <div class="details curtain">
                 <div class="row">
                     <div class="col-12 col-md-8">
                         <div class="left">
@@ -115,6 +115,19 @@
                                         <span>9</span>
                                         <span>10</span>
                                     </div>
+                                </div>
+                                <div class="Size-Type">
+                                    <h6>Tell us the size(s) of your Curtain(s):</h6>
+                                    <span class="active w-auto">CM</span>
+                                    <span class="w-auto">FEET</span>
+                                    <span class="w-auto">INCH</span>
+                                    <div class="size d-flex justify-content-start align-items-center ">
+                                        <input type="number" placeholder="1. Curtain">
+                                        <p class="m-0">X</p>
+                                        <input type="number" placeholder="1. Curtain">
+                                        <p class="unit m-0">CM</p>
+                                    </div>
+                                    <p class="Err text-danger font-weight-bold">Please Enter Curtain Size</p>
                                 </div>
                                 <div class="msg">
                                     <h6>Do you have any specific cleaning instructions?</h6>
@@ -293,7 +306,6 @@
         </div>
         </div>
     </div>
-
     <!-----------------End Booking Page---------------->
     <!------------------Sart Map Model ------------>
     <div class="mapModel modal fade" id="MapModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -318,19 +330,21 @@
                     <div class="col-12 col-md-6">
                         <div class="DetailsBlock">
                             <!-- <label for="address">Building name / villa name:</label> -->
-                            <input id="BuildingName" type="text" class="form-control" placeholder="Building name / villa name" required /><br/>
+                            <input id="BuildingName" type="number" class="form-control" placeholder="Building Number / villa Number" required />
+                            <span class="text-danger font-weight-bold">Please Enter Building Number</span>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="DetailsBlock">
                             <!-- <label for="address">Building name / villa name:</label> -->
-                            <input id="AdditionalDirections" type="text" class="form-control" placeholder="Additional directions" required /><br/>
+                            <input id="Building" type="text" class="form-control" placeholder="Building name / villa name" required />
+                            <span class="text-danger font-weight-bold ">Please Enter Building Name</span>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="DetailsBlock">
                             <!-- <label for="address">Building name / villa name:</label> -->
-                            <input id="Building" type="text" class="form-control" placeholder="Building name / villa name" required /><br/>
+                            <input id="AdditionalDirections" type="text" class="form-control" placeholder="Additional directions" />
                         </div>
                     </div>
                 </div>
@@ -338,9 +352,17 @@
                 <input type="text" id="longitude"class="form-control d-none"  placeholder="Longitude"/>
             </div>
             <div class="modal-footer d-flex justify-content-center  ">
-            <button type="button" class="btn btn-primary">Continue</button>
+            <button type="button" class="btn btn-primary" id='MapContinue'>Continue</button>
             </div>
         </div>
+        </div>
+        <div class="ErrMessage">
+            <i class="fas fa-times"></i>
+            <div class="msg">
+                <h6><i class="fas fa-exclamation-triangle text-danger"></i>Error.</h6>
+                <p>We do not currently operate in this area.</p>
+            </div>
+            <span></span>
         </div>
     </div>
     <!------------------End Map Model ------------>
@@ -382,6 +404,6 @@
     </script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/MapScript.js"></script>
-    <script src="js/AirService.js"></script>
+    <script src="js/CurtainService.js"></script>
 </body>
 </html>
