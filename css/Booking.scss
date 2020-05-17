@@ -215,7 +215,6 @@
           }
           
           & .step-label {
-           
             display: flex;
           }
         }  
@@ -226,7 +225,6 @@
           padding-right: 10px;
           
           & .step-label {
-           
             display: flex;
           }
         }
@@ -401,6 +399,63 @@
                         margin-bottom:40px;
                     } 
                 }
+            }
+            .payment{
+              margin:10px;
+              padding:30px 0;
+              div{
+                width:200px;
+                height:150px;
+                margin:10px;
+                padding:20px;
+                background:$DarkGreen;
+                color:$white;
+                border-radius:5px;
+                box-shadow:0 0 5px 0 #999;
+                transition:all .5s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                  transition:all .5s ease-in-out;
+                  color:$white;
+                  background:$Sky;
+                  
+                }
+                input{
+                  display: none;
+                }
+                label{
+                  margin: 5px 0;
+                }
+              }
+              .active{
+                  color:$white;
+                  background:$Sky;
+              }
+            }
+            /*Visa Details */
+            .visaDetails{
+              padding: 20px 0;
+              .row{
+                display: none;
+              }
+              input{
+                width:40%;
+                margin-right:10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 5px 10px;
+                outline: none;
+                transition: all .4s ease-in-out;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                -moz-appearance: textfield;
+                margin: 0;
+                }
+              }
+              span{
+                display:none;
+              }
             }
         }
         button{
@@ -594,4 +649,12 @@
 }
 .pac-container{
   z-index: 99999 !important;
+}
+
+//Date Picker style 
+.datetimepicker {
+  .active{
+    background:$Sky !important;
+    color:$white !important;
+  }
 }

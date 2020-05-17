@@ -207,6 +207,26 @@ footer .bottomFooter .right .colored:hover {
   font-size: 13px;
 }
 
+#LoginModel .modal-body form input {
+  /* Chrome, Safari, Edge, Opera */
+}
+
+#LoginModel .modal-body form input::-webkit-outer-spin-button, #LoginModel .modal-body form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+#LoginModel .modal-body form input:focus {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: 1px solid #2eb3b7;
+}
+
+#LoginModel .modal-body form .err {
+  display: none;
+}
+
 #LoginModel .modal-body form .group {
   border: 1px solid #eee;
   border-radius: 5px;
@@ -216,6 +236,33 @@ footer .bottomFooter .right .colored:hover {
 #LoginModel .modal-body form .group input {
   border: none;
   outline: none;
+}
+
+#LoginModel .modal-body form .verficationNumber {
+  display: none;
+}
+
+#LoginModel .modal-body form .verficationNumber input {
+  /* Chrome, Safari, Edge, Opera */
+  width: 20%;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+#LoginModel .modal-body form .verficationNumber input::-webkit-outer-spin-button, #LoginModel .modal-body form .verficationNumber input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+#LoginModel .modal-body form .verficationNumber input:focus {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: 1px solid #2eb3b7;
 }
 
 #LoginModel .modal-footer {
@@ -240,6 +287,10 @@ footer .bottomFooter .right .colored:hover {
   transition: all .4s ease-in-out;
   outline: none;
   width: 150px;
+}
+
+#LoginModel .modal-footer .continuebtn {
+  display: none;
 }
 
 /*********************End login Style*******************/
@@ -575,6 +626,7 @@ footer .bottomFooter .right .colored:hover {
       -ms-flex-pack: start;
           justify-content: flex-start;
   display: none;
+  /*Visa Details */
 }
 
 .Frequancy .Details .inner ul {
@@ -707,6 +759,75 @@ footer .bottomFooter .right .colored:hover {
     width: 220px;
     margin-bottom: 40px;
   }
+}
+
+.Frequancy .Details .inner .payment {
+  margin: 10px;
+  padding: 30px 0;
+}
+
+.Frequancy .Details .inner .payment div {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  padding: 20px;
+  background: #132a2f;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 0 #999;
+          box-shadow: 0 0 5px 0 #999;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.Frequancy .Details .inner .payment div:hover {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  color: #fff;
+  background: #2eb3b7;
+}
+
+.Frequancy .Details .inner .payment div input {
+  display: none;
+}
+
+.Frequancy .Details .inner .payment div label {
+  margin: 5px 0;
+}
+
+.Frequancy .Details .inner .payment .active {
+  color: #fff;
+  background: #2eb3b7;
+}
+
+.Frequancy .Details .inner .visaDetails {
+  padding: 20px 0;
+}
+
+.Frequancy .Details .inner .visaDetails .row {
+  display: none;
+}
+
+.Frequancy .Details .inner .visaDetails input {
+  width: 40%;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.Frequancy .Details .inner .visaDetails input::-webkit-outer-spin-button, .Frequancy .Details .inner .visaDetails input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+.Frequancy .Details .inner .visaDetails span {
+  display: none;
 }
 
 .Frequancy .Details button {
@@ -947,5 +1068,10 @@ footer .bottomFooter .right .colored:hover {
 
 .pac-container {
   z-index: 99999 !important;
+}
+
+.datetimepicker .active {
+  background: #2eb3b7 !important;
+  color: #fff !important;
 }
 /*# sourceMappingURL=Booking.css.map */

@@ -134,16 +134,6 @@ $('#MapContinue').click(function(){
     let long = $('#longitude').val();
     
     // here call api using ajax with long and lat variable 
-
-    //check input filed 
-    for(let i = 0; i< $('.DetailsBlock input').length ; i++){
-        if($('.DetailsBlock input:eq('+i+')').val()){
-            console.log('value')
-            $('.DetailsBlock:eq('+i+') span').fadeOut();
-        }else{
-            $('.DetailsBlock:eq('+i+') span').fadeIn();
-        }
-    }
 });
 
 //Error Message Function

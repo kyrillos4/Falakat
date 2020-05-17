@@ -128,6 +128,61 @@
                                 <button  class="Next">Next</button>
                                 <button class="Back">Back</button>
                             </div>
+                        <!--Payment methods -->
+                            <div class="inner"  data-class="stepThree">
+                                <h6>Please Choose Payment Method</h6>
+                                <div class="payment d-flex justify-content-center align-items-center">
+                                    <div class="active cash d-flex justify-content-center align-items-center flex-column ">
+                                        <i class="fas fa-money-bill-alt fa-3x"></i>
+                                        <label for="Cash">Cash</label>
+                                        <input type="radio" id="Cash" name="paymentM">
+                                    </div>
+                                    <div class="visa d-flex justify-content-center align-items-center  flex-column">
+                                        <i class="fas fa-credit-card fa-3x"></i>
+                                        <label for="visa">Visa</label>
+                                        <input type="radio" id="visa" name="paymentM">
+                                    </div>
+                                </div>
+                                <!--Visa Details -->
+                                <div class="visaDetails">
+                                    <form >
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="CardNumber">Card Numbers</label>
+                                                    <input class="d-block w-100" type="number" maxlength="14" name="" id="CardNumber" placeholder="Card Number" required>
+                                                    <span class="text-danger font-weight-bold">Please Enter Card Number</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div>
+                                                    <label class="d-block" for="Exp">Expiration Date</label>
+                                                    <input  type="number" name="" id="Exp" maxlength="2"  placeholder="MM" required>
+                                                    <input  type="number" name="" id="Exp" maxlength="4" placeholder="YYYY" required>
+                                                    <span class="text-danger font-weight-bold">Please Enter Expiration Date</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div>
+                                                    <label for="holder">Cardholder Name</label>
+                                                    <input class="d-block w-100"  type="text" name="" id="holder" placeholder="Card Holder Name" required >
+                                                    <span class="text-danger font-weight-bold">Please Enter Card Holder Name</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div>
+                                                    <label class="d-block" for="cvv">Cvv Numbers</label>
+                                                    <input  type="number"  maxlength="3" id="cvv" required>
+                                                    <span class=" text-danger font-weight-bold">Please Enter CVV Numbers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <button  class="Done" type="submit">Done</button>
+                                <button class="Back">Back</button>
+                            </div>
+                            <!--End Payment Method-->
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
@@ -308,7 +363,7 @@
                     <div class="col-12 col-md-6">
                         <div class="DetailsBlock">
                             <!-- <label for="address">Address:</label> -->
-                            <input id="address" type="text" class="form-control" placeholder="Address" required/><br/>
+                            <input id="address" type="text" class="form-control" placeholder="Address" disabled required/><br/>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">

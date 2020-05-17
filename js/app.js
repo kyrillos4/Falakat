@@ -16,6 +16,17 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
+//Model Select Country in Booking page
+(function(){
+    for(let i = 0 ; i < $('.modal ul li').length; i++){
+        $('.modal ul li:eq('+i+')').click(function(){
+            $('.city').text($(this).text());
+            $('.city').attr('data-class',$(this).text());
+            $('.fade').removeClass('show').css('display' , 'none');
+            $('body').removeClass('modal-open').css('padding' , '0');
+        })
+    }
+})();
 /****************SCript Questions in Booking Page *****************/
 // Array of Results of all questions 
 var AnswersBooking = [
@@ -25,9 +36,12 @@ var AnswersBooking = [
     {'How many hours do you need your cleaner to stay?' : '2'},
     {'How many cleaners do you need?': '1'},
     {'Do you require cleaning materials?' : 'Yes'},
-    {"Do you have any specific instructions?" : 'Empty'}
-
+    {"Do you have any specific instructions?" : 'Empty'},
+    {'Address' : 'Empty'}
 ];
+
+//login check 
+var login = false;
 
 $('.Details .inner .Next:eq(0)').click(function(){
     // validation for City 
@@ -76,31 +90,30 @@ $('.Details .inner .Next:eq(1)').click(function(){
         alert('please Choose correct Hours From Shown Hours ');
     }else if($('.Cleaners').data('value') > 4){
         alert('Please Chosse correct Number of Cleaner ');
+    }else if(login === false){
+        $(this).attr('data-toggle' , 'modal').attr('data-target' , '#LoginModel');
     }else{
-    $(this).parent().fadeOut(function(){
-        $(this).next().fadeIn();
-        $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
-        $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
-    });
+        $(this).attr('data-toggle' , 'modal').attr('data-target' , false);
+        $(this).parent().fadeOut(function(){
+            $(this).next().fadeIn();
+            $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
+            $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
+        });
     }
 });
 $('.Details .inner .Next:eq(2)').click(function(){
-    const date = new Date;
-    console.log(date.toDateString())
-    console.log(AnswersBooking);
     //date validation
     if($('.date input').val()){
         // data-toggle="modal" data-target="#MapModel"
         $(this).attr('data-toggle' , 'modal').attr('data-target' , '#MapModel');
+        $('.'+$(this).parent().data('class') +'').removeClass('--current').addClass('--completed');
+        $('.'+$(this).parent().next().data('class') +'').removeClass('--pending').addClass('--current');
         $('.Errors:eq(1)').css('display' , 'none');
     }else{
         $('.Errors:eq(1)').css('display' , 'block');
     }
 });
 $('.dry .inner .Next:eq(1)').click(function(){
-    const date = new Date;
-    console.log(date.toDateString())
-    console.log(AnswersBooking);
     //date validation
     if($('.date input').val()){
         // data-toggle="modal" data-target="#MapModel"
@@ -115,21 +128,95 @@ $('.Details .inner .Back').click(function(){
     $(this).parent().fadeOut(function(){
         $('.'+$(this).prev().data('class') +'').removeClass('--completed').addClass('--current');
         $('.'+$(this).data('class') +'').removeClass('--current').addClass('--pending');
+        $('.stepFive').prev().removeClass('--completed').addClass('--current');
+        $('.stepFive').removeClass('--current').addClass('--pending');
+        
         $(this).prev().fadeIn();
-    })
+    });
 });
 
-//Mode in Select Country in Booking page
-(function(){
-    for(let i = 0 ; i < $('.modal ul li').length; i++){
-        $('.modal ul li:eq('+i+')').click(function(){
-            $('.city').text($(this).text());
-            $('.city').attr('data-class',$(this).text());
-            $('.fade').removeClass('show').css('display' , 'none');
-            $('body').removeClass('modal-open').css('padding' , '0');
-        })
+
+//Map Model
+//Map Continue Button 
+$('#MapContinue').click(function(){
+    //check input filed 
+    if($('.DetailsBlock input:eq(1)').val() && $('.DetailsBlock input:eq(2)').val()){
+        $('.DetailsBlock span').fadeOut();
+        AnswersBooking[7] = {'Address' : $('.DetailsBlock input:eq(0)').val()}
+        $('#MapContinue').attr('data-dismiss' , 'modal');
+        $('.DateBlock').parent().fadeOut(function(){
+            $('.DateBlock').parent().next().fadeIn();
+            
+            $('.stepFour').removeClass('--current').addClass('--completed');
+            $('.stepFour').next().removeClass('--pending').addClass('--current');
+            // $('.stepFour').removeClass('--current').addClass('--completed');
+        });
+    }else{
+        $('.DetailsBlock span').fadeIn();
     }
-})();
+});
+
+//Login Model script
+$('#LoginModel input').keydown(function(){
+    if($(this).val()){
+        $('.Next').prop("disabled", false);
+    }else{
+        $('.Next').prop("disabled", true);
+    }
+});
+$('#LoginModel .Next').click(function(){
+    $(this).prop("disabled", false);
+    if($('#PhoneNumber').val().length <= 8){
+        $('.phone .err').fadeIn();
+    }else{
+        $('.phone .err').fadeOut();
+        $('.phone').fadeOut(function(){
+            $('.verficationNumber').fadeIn().css('display' , 'flex');
+        });
+        $(this).fadeOut(function(){
+            $(this).next().fadeIn();
+        });
+    }
+});
+
+$('#LoginModel .continuebtn').click(function(){
+    login = true;
+    $('.continuebtn').attr('data-dismiss' , 'modal');
+})
+
+
+
+//Payment Part Functions 
+$('.payment div').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    $(this).children('input').attr('checked' , true);
+    $(this).siblings().children('input').attr('checked' , false);
+    if($('.visa').hasClass('active')){
+        $('.visaDetails .row').fadeIn().css('display' , 'flex');
+    }else{
+        $('.visaDetails .row').fadeOut();
+    }
+});
+
+
+//Payment Validations 
+// for(let i =0 ; i < $('.visaDetails input').length ; i++){
+//     console.log($(`.visaDetails input:eq(0)`).val().length)
+//     $(`.visaDetails input:eq(${i})`).val().length === 3;
+// }
+// $(`.visaDetails input`).change(function(){
+//     console.log($(`.visaDetails input:eq(0)`).val().length)
+// })
+// $('.Done').click(function(){
+//     //check validation inputs 
+//     if(!$('.visaDetails input:eq(0)').val().length < 14 ){
+//         $('.visaDetails span:eq(0)').show();
+//     }else{
+//         $('.visaDetails span:eq(0)').hide();
+
+//     }
+// });
+
 
 //All Questions and answers  in Dry Page 
 let Questions = [
@@ -190,8 +277,12 @@ let Answers = [
 
 // Data Picker in Booking page
 $(".form_datetime").datetimepicker({
-    format: "MM dd yyyy - HH:ii P",
+    format: "dd MM yyyy - HH:ii P",
     showMeridian: true,
     autoclose: true,
     todayBtn: true,
+    startDate: new Date,
+    hoursDisabled: [0,1,2,3,4,5,6,7,19,20,21,22,23,24],
+    // minuteStep: 15
+    todayBtn: false,
 });

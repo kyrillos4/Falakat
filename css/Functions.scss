@@ -75,3 +75,19 @@
         left: -4%;
     }
 }
+
+
+//inputs Fun
+@mixin INPUT {
+     /* Chrome, Safari, Edge, Opera */
+     &::-webkit-outer-spin-button,
+     &::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     -moz-appearance: textfield;
+     margin: 0;
+     }
+     &:focus{
+         transition: all .4s ease-in-out;
+         border: 1px solid $Sky;
+     }
+}
