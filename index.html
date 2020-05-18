@@ -265,21 +265,38 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <h6>YOUR MOBILE NUMBER</h6>
-                    <div class="group">
-                        <span>+971</span>
-                        <input type="text" placeholder="001210000" required>
+                   <div class="phone">
+                        <h6>YOUR MOBILE NUMBER</h6>
+                        <div class="group">
+                            <span>+971</span>
+                            <input id="PhoneNumber" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9" style="width: 80%;" type="number" placeholder="15 121 5879" required>
+                        </div>
+                        <span class="err text-danger">Please Enter Valid Number</span>
+                    </div>
+                    <div class="verficationNumber  justify-content-center align-items-center flex-column ">
+                        <h6>Please verify your number</h6>
+                        <div class="numbers d-flex justify-content-center align-items-center">
+                            <input type="number" maxlength="1">
+                            <input type="number" maxlength="1">
+                            <input type="number" maxlength="1">
+                            <input type="number" maxlength="1">
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class=" Next btn btn-primary" disabled>CONTINUE</button>
             <button type="button" class=" continuebtn btn btn-primary">CONTINUE</button>
             </div>
         </div>
         </div>
     </div>
     <!-- End Login Model-->
+    <!--Start Loading Page -->
+    <div id="loading" >
+        <img src='./images/preloadone.gif' alt="Loading"> 
+    </div>
+    <!--End Loading Page -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

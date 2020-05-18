@@ -35,6 +35,11 @@
             margin: 0 5px;
         }
     }
+    h1{
+      @media all and (max-width:769px){
+        font-size:26px;
+      }
+    }
     .booking-steps {
         width: 100%;
         height: 45px;
@@ -238,6 +243,9 @@
             padding: 15px 25px;
             border-radius: 10px;
             box-shadow:  0 0 5px 0 #ddd;
+            @media all and (max-width:769px){
+              padding:10px 15px;
+            }
         }
         .right{
             h6{text-transform: uppercase;}
@@ -277,6 +285,9 @@
                     .total{color:$Sky; font-weight: 500;}
                 }
             }
+            @media all and (max-width:769px){
+              margin-top:15px;
+            }
         }
     }
     .Details{
@@ -292,6 +303,9 @@
             display: none;
             ul{
                 margin-top: 35px;
+                @media all and (max-width:769px){
+                  margin:0;
+                }
                 li{
                     margin: 10px 0;
                     input[type='radio'] {
@@ -396,8 +410,10 @@
                     width:450px;
                     @media all and (max-width:769px) {
                         width:220px;
-                        margin-bottom:40px;
                     } 
+                }
+                @media all and (max-width:769px) {
+                  margin-bottom:40px;
                 }
             }
             .payment{
@@ -439,6 +455,7 @@
                 display: none;
               }
               input{
+                @include INPUT();
                 width:40%;
                 margin-right:10px;
                 border: 1px solid #ddd;
@@ -456,6 +473,9 @@
               span{
                 display:none;
               }
+            }
+            @media all and (max-width:769px) {
+              padding: 10px 0px;
             }
         }
         button{
@@ -512,6 +532,9 @@
                     color:$white;
                     transition:all .5s ease-in-out;
                 }
+                @media all and(max-width:769px){
+                  width:110px;
+                }
             }
             .active{
               background:$Sky;
@@ -526,6 +549,7 @@
                 resize: none;
                 border:1px solid #ddd;
                 padding: 10px;
+                margin-bottom:30px;
                 @media all and (max-width:769px){
                   width:100%;
                 }
@@ -566,6 +590,17 @@
 .datetimepicker{
     left:170.5px !important;
     top:403.281px !important;
+    @media all and (max-width:769px){
+      left: 36.5px !important;
+      top: 371.281px !important;
+    }
+}
+.Dry-date{
+  .datetimepicker{
+    @media all and (max-width:769px){
+      top: 608.281px !important;
+    }
+}
 }
 //Map Model 
 .mapModel{
@@ -598,7 +633,10 @@
       height:30px;
     }
     .DetailsBlock{
-      margin: 0 10px;
+      margin:0 10px;
+      @media alla and (max-width:769px){
+        margin:10px;
+      }
       input{
         font-size:14px !important;
       }

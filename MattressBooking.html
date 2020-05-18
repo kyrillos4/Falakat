@@ -14,7 +14,7 @@
 <body>
 <!-------------Start Booking Page------------------->
     <!--Upper Nav-->
-    <div class="upperNav">
+    <div class="upperNav wow fadeIn ">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -38,13 +38,13 @@
     <!--Start Frequancy Section-->
     <section class="Frequancy">
         <div class="container">
-            <div class="selectAddress d-flex align-items-center flex-column">
+            <div class="selectAddress d-flex align-items-center flex-column wow fadeInUp " data-wow-delay=".2s">
                 <div class="d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalCenter"><h6 class="city"  >Emirate</h6><i class="fas fa-chevron-down"></i></div>
                 <span class="Errors text-danger font-weight-bold">Please Choose City</span>
             </div>
-            <h1 class="text-center">Mattress Cleaning </h1>
+            <h1 class="text-center wow fadeInUp " data-wow-delay=".3s">Mattress Cleaning </h1>
             <!--Start Steps Dots -->
-            <div class="booking-steps">
+            <div class="booking-steps wow fadeInUp" data-wow-delay=".4s">
                 <button class="step --current stepOne">
                   <span class="step-position">
                     <span class="step-number">1</span>
@@ -85,9 +85,9 @@
             <div class="details carpet ">
                 <div class="row">
                     <div class="col-12 col-md-8">
-                        <div class="left">
+                        <div class="left wow fadeIn" data-wow-delay=".5s">
                         <!--Question-->
-                            <div class="inner active" data-class="stepOne">
+                            <div class="inner active" data-class=".stepOne">
                                 <div class="instrac">
                                     <ul class="list-unstyled">
                                         <li>- Removal of the dust mites through vacuuming and sanitization</li>
@@ -146,9 +146,9 @@
                                 </div>
                                 <button class='Next'>Next</button>
                             </div>
-                            <div class="inner" data-class="stepTwo">
+                            <div class="inner" data-class=".stepTwo">
                                 <h6>Please Choose Data & Time</h6>
-                                <div class=" date input-append date form_datetime add-on" data-date="" startDate='0'>
+                                <div class="DateBlock date input-append date form_datetime add-on" data-date="" startDate='0'>
                                     <input size="16" type="text" value="" readonly placeholder="Choose Date And Time">
                                     <span class="add-on"><i class="icon-th"></i></span>
                                     <span class="Errors text-danger font-weight-bold">Please Choose Date </span>                                    <span></span>
@@ -156,10 +156,65 @@
                                 <button  class="Next">Next</button>
                                 <button class="Back">Back</button>
                             </div>
+                            <!--Payment methods -->
+                            <div class="inner"  data-class=".stepThree">
+                                <h6>Please Choose Payment Method</h6>
+                                <div class="payment d-flex justify-content-center align-items-center">
+                                    <div class="active cash d-flex justify-content-center align-items-center flex-column ">
+                                        <i class="fas fa-money-bill-alt fa-3x"></i>
+                                        <label for="Cash">Cash</label>
+                                        <input type="radio" id="Cash" name="paymentM">
+                                    </div>
+                                    <div class="visa d-flex justify-content-center align-items-center  flex-column">
+                                        <i class="fas fa-credit-card fa-3x"></i>
+                                        <label for="visa">Visa</label>
+                                        <input type="radio" id="visa" name="paymentM">
+                                    </div>
+                                </div>
+                                <!--Visa Details -->
+                                <div class="visaDetails">
+                                    <form >
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="CardNumber">Card Numbers</label>
+                                                    <input class="d-block w-100" type="number" maxlength="14" name="" id="CardNumber" placeholder="Card Number" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                                    <span class="text-danger font-weight-bold">Please Enter Card Number</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div>
+                                                    <label class="d-block" for="Exp">Expiration Date</label>
+                                                    <input  type="number" name="" id="Exp" maxlength="2"  placeholder="MM" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                                    <input  type="number" name="" id="Exp" maxlength="4" placeholder="YYYY" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                                    <span class="text-danger font-weight-bold">Please Enter Expiration Date</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div>
+                                                    <label for="holder">Cardholder Name</label>
+                                                    <input class="d-block w-100"  type="text" name="" id="holder" placeholder="Card Holder Name" required >
+                                                    <span class="text-danger font-weight-bold">Please Enter Card Holder Name</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div>
+                                                    <label class="d-block" for="cvv">Cvv Numbers</label>
+                                                    <input  type="number"  maxlength="3" id="cvv" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                                    <span class=" text-danger font-weight-bold">Please Enter CVV Numbers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <button  class="Done" type="submit">Done</button>
+                                <button class="Back">Back</button>
+                            </div>
+                            <!--End Payment Method-->
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
-                        <div class="right">
+                        <div class="right wow fadeIn" data-wow-delay=".7s">
                             <div class="title d-flex justify-content-between align-items-center ">
                                 <h6>City</h6>
                                 <h6>Dubai</h6>
@@ -320,7 +375,7 @@
 
     <!-----------------End Booking Page---------------->
     <!------------------Sart Map Model ------------>
-    <div class="mapModel modal fade" id="MapModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="mapModel modal fade"  id="MapModel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -391,22 +446,38 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <h6>YOUR MOBILE NUMBER</h6>
-                    <div class="group">
-                        <span>+971</span>
-                        <input type="text" placeholder="001210000" required>
+                   <div class="phone">
+                        <h6>YOUR MOBILE NUMBER</h6>
+                        <div class="group">
+                            <span>+971</span>
+                            <input id="PhoneNumber" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9" style="width: 80%;" type="number" placeholder="15 121 5879" required>
+                        </div>
+                        <span class="err text-danger">Please Enter Valid Number</span>
+                    </div>
+                    <div class="verficationNumber  justify-content-center align-items-center flex-column ">
+                        <h6>Please verify your number</h6>
+                        <div class="numbers d-flex justify-content-center align-items-center">
+                            <input type="number" maxlength="1">
+                            <input type="number" maxlength="1">
+                            <input type="number" maxlength="1">
+                            <input type="number" maxlength="1">
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class=" Next btn btn-primary" disabled>CONTINUE</button>
             <button type="button" class=" continuebtn btn btn-primary">CONTINUE</button>
             </div>
         </div>
         </div>
     </div>
     <!-- End Login Model-->
-
+    <!--Start Loading Page -->
+    <div id="loading" >
+        <img src='./images/preloadone.gif' alt="Loading"> 
+    </div>
+    <!--End Loading Page -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

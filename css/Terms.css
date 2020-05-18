@@ -166,6 +166,12 @@ footer .bottomFooter .right .colored:hover {
   font-weight: 700;
 }
 
+@media all and (max-width: 769px) {
+  .headerService .title h1 {
+    font-size: 28px;
+  }
+}
+
 .headerService .title button {
   padding: 5px 20px;
   border: none;
@@ -325,8 +331,58 @@ footer .bottomFooter .right .colored:hover {
   border: 1px solid #2eb3b7;
 }
 
+@media all and (max-width: 769px) {
+  .carpet .left .Size-Type .size input, .curtain .left .Size-Type .size input {
+    width: 90px;
+  }
+}
+
 .carpet .left .Size-Type .Err, .curtain .left .Size-Type .Err {
   display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #797777;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2eb3b7;
+}
+
+/*Loading Style*/
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #FBFBFB;
+  z-index: 999999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loading img {
+  width: 400px;
 }
 
 .Terms {

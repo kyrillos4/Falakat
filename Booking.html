@@ -13,7 +13,7 @@
 <body>
     <!-------------Start Booking Page------------------->
     <!--Upper Nav-->
-    <div class="upperNav">
+    <div class="upperNav wow fadeIn">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -37,13 +37,13 @@
     <!--Start Frequancy Section-->
     <section class="Frequancy">
         <div class="container">
-            <div class="selectAddress d-flex align-items-center flex-column">
+            <div class="selectAddress d-flex align-items-center flex-column wow fadeInUp " data-wow-delay=".2s" >
                 <div class="d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalCenter"><h6 class="city"  >Emirate</h6><i class="fas fa-chevron-down"></i></div>
                 <span class="Errors text-danger font-weight-bold">Please Choose City</span>
             </div>
-            <h1 class="text-center">Frequency</h1>
+            <h1 class="text-center wow fadeInUp " data-wow-delay=".3s">Frequency</h1>
             <!--Start Steps Dots -->
-            <div class="booking-steps">
+            <div class="booking-steps wow fadeInUp" data-wow-delay=".4s">
                 <button class="step --current stepOne">
                   <span class="step-position">
                     <span class="step-number">1</span>
@@ -93,9 +93,9 @@
             <div class="details Details">
                 <div class="row">
                     <div class="col-12 col-md-8">
-                        <div class="left">
+                        <div class="left wow fadeIn" data-wow-delay=".5s">
                         <!--Question-->
-                            <div class="inner active" data-class="stepOne">
+                            <div class="inner active" data-class=".stepOne">
                                 <h6>How often do you need your cleaner?</h6>
                                 <ul class="list-unstyled">
                                     <li>
@@ -116,7 +116,7 @@
                                 </ul>
                                 <button class='Next'>Next</button>
                             </div>
-                            <div class="inner  " data-class="stepTwo">
+                            <div class="inner  " data-class=".stepTwo">
                                 <div class="Times Hours" data-value='2'>
                                     <h6>How many hours do you need your cleaner to stay?</h6>
                                     <div class="numbers d-flex justify-content-center align-items-center flex-wrap">
@@ -143,7 +143,7 @@
                                     <h6>Do you require cleaning materials?</h6>
                                     <div class="numbers d-flex justify-content-center align-items-center">
                                         <div class="approve active d-flex justify-content-center" data-value="Yes">yes Please</div>
-                                        <div class="approve d-flex justify-content-center" data-value="No">No, I have theme </div>
+                                        <div class="approve d-flex justify-content-center" data-value="No">No,I have it</div>
                                     
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@
                                 <button class='Next'>Next</button>
                                 <button class="Back">Back</button>
                             </div>
-                            <div class="inner" data-class="stepThree">
+                            <div class="inner" data-class=".stepThree">
                                 <h6>Please Choose Data & Time</h6>
                                 <div class="DateBlock date input-append date form_datetime add-on">
                                     <input size="16" id='SelectDate' type="text" value="" readonly placeholder="Choose Date And Time">
@@ -165,7 +165,7 @@
                                 <button class="Back">Back</button>
                             </div>
                             <!--Payment methods -->
-                            <div class="inner"  data-class="stepFour">
+                            <div class="inner"  data-class=".stepFour">
                                 <h6>Please Choose Payment Method</h6>
                                 <div class="payment d-flex justify-content-center align-items-center">
                                     <div class="active cash d-flex justify-content-center align-items-center flex-column ">
@@ -186,15 +186,15 @@
                                             <div class="col-12 col-md-6">
                                                 <div class="mb-3">
                                                     <label for="CardNumber">Card Numbers</label>
-                                                    <input class="d-block w-100" type="number" maxlength="14" name="" id="CardNumber" placeholder="Card Number" required>
+                                                    <input class="d-block w-100" type="number" maxlength="14" name="" id="CardNumber" placeholder="Card Number" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                     <span class="text-danger font-weight-bold">Please Enter Card Number</span>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <div>
                                                     <label class="d-block" for="Exp">Expiration Date</label>
-                                                    <input  type="number" name="" id="Exp" maxlength="2"  placeholder="MM" required>
-                                                    <input  type="number" name="" id="Exp" maxlength="4" placeholder="YYYY" required>
+                                                    <input  type="number" name="" id="Exp" maxlength="2"  placeholder="MM" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                                    <input  type="number" name="" id="Exp" maxlength="4" placeholder="YYYY" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                     <span class="text-danger font-weight-bold">Please Enter Expiration Date</span>
                                                 </div>
                                             </div>
@@ -208,7 +208,7 @@
                                             <div class="col-12 col-md-6">
                                                 <div>
                                                     <label class="d-block" for="cvv">Cvv Numbers</label>
-                                                    <input  type="number"  maxlength="3" id="cvv" required>
+                                                    <input  type="number"  maxlength="3" id="cvv" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                     <span class=" text-danger font-weight-bold">Please Enter CVV Numbers</span>
                                                 </div>
                                             </div>
@@ -222,7 +222,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
-                        <div class="right">
+                        <div class="right wow fadeIn" data-wow-delay=".7s">
                             <div class="title d-flex justify-content-between align-items-center ">
                                 <h6>City</h6>
                                 <h6>Dubai</h6>
@@ -481,7 +481,11 @@
         </div>
     </div>
     <!-- End Login Model-->
-
+    <!--Start Loading Page -->
+    <div id="loading" >
+        <img src='./images/preloadone.gif' alt="Loading"> 
+    </div>
+    <!--End Loading Page -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

@@ -37,11 +37,15 @@ var AnswersBooking = [
     {'How many cleaners do you need?': '1'},
     {'Do you require cleaning materials?' : 'Yes'},
     {"Do you have any specific instructions?" : 'Empty'},
-    {'Address' : 'Empty'}
 ];
 
 //login check 
 var login = false;
+
+//loading page 
+$(document).ready(function(){
+    $('#loading').fadeOut();
+});
 
 $('.Details .inner .Next:eq(0)').click(function(){
     // validation for City 
@@ -53,8 +57,8 @@ $('.Details .inner .Next:eq(0)').click(function(){
         //move to next question
         $(this).parent().fadeOut(function(){
             $(this).next().fadeIn();
-            $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
-            $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
+            $($(this).data('class')).removeClass('--current').addClass('--completed');
+            $($(this).next().data('class')).removeClass('--pending').addClass('--current');
         });
     } else{
         $('.city').parent().next().fadeIn();
@@ -96,8 +100,8 @@ $('.Details .inner .Next:eq(1)').click(function(){
         $(this).attr('data-toggle' , 'modal').attr('data-target' , false);
         $(this).parent().fadeOut(function(){
             $(this).next().fadeIn();
-            $('.'+$(this).data('class') +'').removeClass('--current').addClass('--completed');
-            $('.'+$(this).next().data('class') +'').removeClass('--pending').addClass('--current');
+            $($(this).data('class')).removeClass('--current').addClass('--completed');
+            $($(this).next().data('class')).removeClass('--pending').addClass('--current');
         });
     }
 });
@@ -106,8 +110,8 @@ $('.Details .inner .Next:eq(2)').click(function(){
     if($('.date input').val()){
         // data-toggle="modal" data-target="#MapModel"
         $(this).attr('data-toggle' , 'modal').attr('data-target' , '#MapModel');
-        $('.'+$(this).parent().data('class') +'').removeClass('--current').addClass('--completed');
-        $('.'+$(this).parent().next().data('class') +'').removeClass('--pending').addClass('--current');
+        $($(this).parent().data('class')).removeClass('--current').addClass('--completed');
+        $($(this).parent().next().data('class')).removeClass('--pending').addClass('--current');
         $('.Errors:eq(1)').css('display' , 'none');
     }else{
         $('.Errors:eq(1)').css('display' , 'block');
@@ -126,14 +130,16 @@ $('.dry .inner .Next:eq(1)').click(function(){
 // function back button in Question Booking page
 $('.Details .inner .Back').click(function(){
     $(this).parent().fadeOut(function(){
-        $('.'+$(this).prev().data('class') +'').removeClass('--completed').addClass('--current');
-        $('.'+$(this).data('class') +'').removeClass('--current').addClass('--pending');
-        $('.stepFive').prev().removeClass('--completed').addClass('--current');
-        $('.stepFive').removeClass('--current').addClass('--pending');
-        
+        $($(this).prev().data('class')).removeClass('--completed').addClass('--current').nextAll().addClass('--pending');
+        $($(this).data('class')).removeClass('--current').addClass('--pending');
         $(this).prev().fadeIn();
     });
 });
+
+//Done Button Function
+$('.Done').click(function(){
+    console.log(AnswersBooking);
+})
 
 
 //Map Model
@@ -146,10 +152,8 @@ $('#MapContinue').click(function(){
         $('#MapContinue').attr('data-dismiss' , 'modal');
         $('.DateBlock').parent().fadeOut(function(){
             $('.DateBlock').parent().next().fadeIn();
-            
             $('.stepFour').removeClass('--current').addClass('--completed');
             $('.stepFour').next().removeClass('--pending').addClass('--current');
-            // $('.stepFour').removeClass('--current').addClass('--completed');
         });
     }else{
         $('.DetailsBlock span').fadeIn();
@@ -200,23 +204,33 @@ $('.payment div').click(function(){
 
 
 //Payment Validations 
-// for(let i =0 ; i < $('.visaDetails input').length ; i++){
-//     console.log($(`.visaDetails input:eq(0)`).val().length)
-//     $(`.visaDetails input:eq(${i})`).val().length === 3;
-// }
-// $(`.visaDetails input`).change(function(){
-//     console.log($(`.visaDetails input:eq(0)`).val().length)
-// })
-// $('.Done').click(function(){
-//     //check validation inputs 
-//     if(!$('.visaDetails input:eq(0)').val().length < 14 ){
-//         $('.visaDetails span:eq(0)').show();
-//     }else{
-//         $('.visaDetails span:eq(0)').hide();
-
-//     }
-// });
-
+$('.Done').click(function(){
+    //check input filed 
+    for(let i = 0; i < $('.visaDetails input').length ; i ++ ){
+        if($.isNumeric($(`.visaDetails input:eq(${i})`).val())){
+            if($(`.visaDetails input:eq(${i})`).val().length < $(`.visaDetails input:eq(${i})`).attr('maxlength')){
+                $(`.visaDetails input:eq(${i})`).next('span').css('display' , 'block');
+            }else{
+                $(`.visaDetails input:eq(${i})`).next('span').css('display' , 'none');
+            }
+        }else{
+            $(`.visaDetails input:eq(${i})`).next('span').css('display' , 'block');
+        }
+    }
+    //check card holder name
+    let ValidName = /^[A-Za-z]+$/;
+    if($('.visaDetails input:eq(3)').val().length >= 4){
+        if(ValidName.test($('.visaDetails input:eq(3)').val())){
+            $('.visaDetails input:eq(3)').next('span').hide();
+        }else{
+            $('.visaDetails input:eq(3)').next('span').show().text('Please Enter Valid Name');
+        }
+    }else if(!$('.visaDetails input:eq(3)').val()){
+        $('.visaDetails input:eq(3)').next('span').show().text('Please Enter Card Holder Name');
+    }else{
+        $('.visaDetails input:eq(3)').next('span').show().text('Please Enter Valid Name');
+    }
+});
 
 //All Questions and answers  in Dry Page 
 let Questions = [
@@ -286,3 +300,5 @@ $(".form_datetime").datetimepicker({
     // minuteStep: 15
     todayBtn: false,
 });
+
+

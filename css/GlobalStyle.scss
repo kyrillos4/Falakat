@@ -151,6 +151,9 @@ footer{
         }
         h1{
             font-weight: 700;
+            @media all and (max-width:769px){
+                font-size: 28px;
+            }
         }
         button{
             @include Button();
@@ -239,11 +242,48 @@ footer{
                     outline: none;
                     transition: all .4s ease-in-out;
                     @include INPUT();
+                    @media all and (max-width:769px) {
+                        width:90px;
+                    }
                 }
             }
             .Err{
                 display: none;
             }
         }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $Grey; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $Sky; 
+  }
+  /*Loading Style*/
+#loading{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:#FBFBFB;
+    z-index: 999999999;
+    @include FlexBox();
+    img{
+        width:400px;
     }
 }

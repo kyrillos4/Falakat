@@ -13,11 +13,11 @@
         .title{
             h6{
                 color:$Grey;
-                font-size: 13px;;
+                font-size: 13px;
             }
             h1{
                 font-size: 22px;
-                margin:10px 0 35px 0
+                margin:10px 0 35px 0;
             }
         }
         .owl-carousel{
@@ -27,6 +27,9 @@
     .Details{
         h1{
             margin: 20px 0;
+            @media all and (max-width:769px){
+                font-size: 23px;
+            }
         }
     }
 }

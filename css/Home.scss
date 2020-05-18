@@ -143,5 +143,18 @@
 /* NOTE -----> Style footer in GlobalSTyles File */
 
 /*********************Login styled from GlobalStyle file *******************/
-
+/*Loading Style*/
+#loading{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:#FBFBFB;
+    z-index: 999999999;
+    @include FlexBox();
+    img{
+        width:400px;
+    }
+}
 
