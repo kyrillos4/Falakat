@@ -46,6 +46,18 @@ var login = false;
 $(document).ready(function(){
     $('#loading').fadeOut();
 });
+//scroll button
+$(window).scroll(function(){
+    if($(window).scrollTop() > 700){
+        $('.scroll').css('display' , 'flex').show();
+    }else{
+        $('.scroll').hide();
+    }
+});
+$('.scroll').click(function(){
+    $(window).scrollTop(0);
+});
+
 
 $('.Details .inner .Next:eq(0)').click(function(){
     // validation for City 

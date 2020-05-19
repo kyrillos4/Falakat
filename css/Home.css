@@ -3,6 +3,18 @@ a {
   color: #000;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
+.mapModel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 /*SStyle Navbar*/
 .upperNav {
   padding: 20px 0;
@@ -41,7 +53,15 @@ footer .Tags {
   padding: 30px 0;
 }
 
-footer .Tags .tag {
+footer .Tags a {
+  color: #fff;
+}
+
+footer .Tags a:hover {
+  color: #fff;
+}
+
+footer .Tags a .tag {
   color: #fff;
   background: #0000004d;
   text-align: center;
@@ -57,22 +77,20 @@ footer .Tags .tag {
   transition: all .5s ease-in-out;
 }
 
-footer .Tags .tag a {
-  color: #fff;
-}
-
-footer .Tags .tag a:hover {
-  color: #fff;
-}
-
 @media all and (max-width: 769px) {
-  footer .Tags .tag {
+  footer .Tags a .tag {
     width: 120px;
     font-size: 10px;
   }
 }
 
-footer .Tags .tag:hover {
+@media all and (max-width: 320px) {
+  footer .Tags a .tag {
+    width: 100px;
+  }
+}
+
+footer .Tags a .tag:hover {
   background: #2eb3b7;
   -webkit-transition: all .5s ease-in-out !important;
   transition: all .5s ease-in-out !important;
@@ -385,6 +403,38 @@ footer .bottomFooter .right .colored:hover {
   width: 400px;
 }
 
+.Scroll {
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  width: 50px;
+  height: 50px;
+  background: #132a2f;
+  color: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-box-shadow: 0 0 5px 0 #797777;
+          box-shadow: 0 0 5px 0 #797777;
+  display: none;
+}
+
+.Scroll:hover {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background: #2eb3b7;
+}
+
 /********************Start Header Style******************/
 .Header {
   background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bg.webp");
@@ -638,27 +688,4 @@ footer .bottomFooter .right .colored:hover {
 /*********************End why us Style*******************/
 /* NOTE -----> Style footer in GlobalSTyles File */
 /*********************Login styled from GlobalStyle file *******************/
-/*Loading Style*/
-#loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #FBFBFB;
-  z-index: 999999999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#loading img {
-  width: 400px;
-}
 /*# sourceMappingURL=Home.css.map */

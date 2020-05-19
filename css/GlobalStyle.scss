@@ -10,7 +10,15 @@ a{
     text-decoration: none !important;
     color:#000;
 }
-
+*{
+    scroll-behavior: smooth;
+}
+.mapModel{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
 /*SStyle Navbar*/
 .upperNav{
     padding: 20px 0;
@@ -53,31 +61,34 @@ footer{
     .Tags{
         border-bottom: 1px solid $Black;
         padding: 30px 0;
-        .tag{
+        a{
             color:$white;
-            background: $Black;
-            text-align: center;
-            border-radius: 25px;
-            font-size: 14px;
-            padding: 10px 13px;
-            margin: 10px 0;
-            font-size: .8125rem;
-            font-weight: 700;
-            width:160px;
-            cursor: pointer;
-            transition: all .5s ease-in-out;
-            a{
+            &:hover{color:$white;}
+            .tag{
                 color:$white;
-                &:hover{color:$white;}
-            }
-            @media all and (max-width:769px) {
-                width:120px;
-                font-size: 10px;
-            }
-            &:hover{
-                background: $Sky;
-                transition: all .5s ease-in-out !important;
-                box-shadow:  0 0 5px 0 $Grey !important;
+                background: $Black;
+                text-align: center;
+                border-radius: 25px;
+                font-size: 14px;
+                padding: 10px 13px;
+                margin: 10px 0;
+                font-size: .8125rem;
+                font-weight: 700;
+                width:160px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                @media all and (max-width:769px) {
+                    width:120px;
+                    font-size: 10px;
+                }
+                @media all and (max-width:320px){
+                    width:100px;
+                }
+                &:hover{
+                    background: $Sky;
+                    transition: all .5s ease-in-out !important;
+                    box-shadow:  0 0 5px 0 $Grey !important;
+                }
             }
         }
         .row{
@@ -285,5 +296,26 @@ footer{
     @include FlexBox();
     img{
         width:400px;
+    }
+}
+
+//SCroll Button Style
+.Scroll{
+    position: fixed;
+    bottom: 3%;
+    right:2%;
+    width:50px;
+    height:50px;
+    background:$DarkGreen;
+    color:$white;
+    border-radius: 50%;
+    @include FlexBox();
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0 5px 0 $Grey;
+    display: none;
+    &:hover{
+        transition: all .5s ease-in-out;
+        background: $Sky;
     }
 }

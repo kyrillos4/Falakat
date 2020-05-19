@@ -78,7 +78,22 @@
             }
         }
     }
-
+    // @keyframes animate{
+    //     0%{
+    //         background-position: 0;
+    //     }
+    //     100%{
+    //         background-position: 1360px;
+    //     }
+    // }
+    // @keyframes  animate_reverse{
+    //     0%{
+    //         background-position: 1360px;
+    //     }
+    //     100%{
+    //         background-position: 0;
+    //     }
+    // }
     .HeaderBottom{
         background: url('https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bottom.svg');
         background-size: cover;
@@ -86,6 +101,31 @@
         bottom: 0;
         height: 80px;
         width: 100%;
+        // animation: animate 10s linear infinite;
+        // &::after{
+        //     content:'';
+        //     width:100%;
+        //     height:100%;
+        //     background: url('https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bottom.svg');
+        //     background-size: cover;
+        //     position: absolute;
+        //     bottom: 0;
+        //     animation: animate 20s linear infinite;
+        //     animation-delay:-5s;
+        //     opacity: 0.6;
+        // }
+        // &::before{
+        //     content:'';
+        //     width:100%;
+        //     height:100%;
+        //     background: url('https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bottom.svg');
+        //     background-size: cover;
+        //     position: absolute;
+        //     bottom: 0;
+        //     animation: animate_reverse 10s linear infinite;
+        //     animation-delay:5s;
+        //     opacity: 0.4;
+        // }
     }
 }
 /**********************End Header Style*******************/
@@ -142,19 +182,5 @@
 
 /* NOTE -----> Style footer in GlobalSTyles File */
 
-/*********************Login styled from GlobalStyle file *******************/
-/*Loading Style*/
-#loading{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100vh;
-    background:#FBFBFB;
-    z-index: 999999999;
-    @include FlexBox();
-    img{
-        width:400px;
-    }
-}
 
+/*********************Login styled from GlobalStyle file *******************/
