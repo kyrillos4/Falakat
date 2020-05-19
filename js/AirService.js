@@ -9,6 +9,13 @@ var AnswersAC = [
     {"Address" : 'Empty'}
 ];
 var login =false;
+
+//loading page 
+$(document).ready(function(){
+    $('#loading').fadeOut();
+});
+
+
 //Mode in Select Country in Booking page
 (function(){
     for(let i = 0 ; i < $('.modal ul li').length; i++){
