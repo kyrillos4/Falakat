@@ -318,6 +318,38 @@ footer .bottomFooter .right .colored:hover {
 }
 
 /*********************End login Style*******************/
+/******************Start County Model *****************/
+#CountryModel .modal-dialog {
+  width: 360px;
+}
+
+#CountryModel .Countries .country {
+  padding: 10px;
+  margin: 5px 0;
+  text-transform: capitalize;
+  color: #797777;
+  cursor: pointer;
+}
+
+#CountryModel .Countries .country svg {
+  display: none;
+}
+
+#CountryModel .modal-footer button {
+  padding: 5px 20px;
+  border: none;
+  background: #2eb3b7;
+  color: #fff;
+  border-radius: 25px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  outline: none;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/******************End County Model *****************/
 /*Some style for Carprt service Bookgin */
 .carpet .left .Size-Type .size, .curtain .left .Size-Type .size {
   margin: 18px 0;

@@ -200,7 +200,15 @@ $('#LoginModel .continuebtn').click(function(){
     $('.continuebtn').attr('data-dismiss' , 'modal');
 })
 
-
+// County Model 
+// $('.selectCountry').click(function(){
+    // for(let i = 0 ; i < $('#CountryModel .country').length ; i++){
+    //     $(`#CountryModel .country:eq(${i})`).click(function(){
+    //         $(`#CountryModel .country:eq(${i})`).last().show();
+    //         $(`#CountryModel .country:eq(${i})`).siblings().last().css('display' , 'none');
+    //     });
+    // }
+// });
 
 //Payment Part Functions 
 $('.payment div').click(function(){

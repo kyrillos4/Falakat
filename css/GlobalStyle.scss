@@ -13,6 +13,7 @@ a{
 *{
     scroll-behavior: smooth;
 }
+//Map Model 
 .mapModel{
     position: absolute;
     top:50%;
@@ -235,7 +236,31 @@ footer{
 }
 
 /*********************End login Style*******************/
-
+/******************Start County Model *****************/
+#CountryModel{
+    .modal-dialog{width: 360px;}
+    .Countries{
+        .country{
+            padding:10px;
+            margin: 5px 0;
+            text-transform: capitalize;
+            color:$Grey;
+            cursor: pointer;
+            svg{
+                display: none;
+            }
+        }
+    }
+    .modal-footer{
+        button{
+            @include Button();
+            width:100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+/******************End County Model *****************/
 
 /*Some style for Carprt service Bookgin */
 .carpet  , .curtain{

@@ -27,6 +27,7 @@
         .logo{
             img{
                 width:150px;
+                cursor: pointer;
                 @media all and (max-width:769px) {
                     width:100%;
                 }
@@ -35,6 +36,7 @@
         .login{
             img{
                 margin: 0 10px;
+                cursor: pointer;
             }
             button{
                 background: none;

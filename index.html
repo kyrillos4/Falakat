@@ -31,7 +31,7 @@
                     <div class="col-7">
                         <div class="login d-flex justify-content-end align-items-center">
                             <button class="login" class="btn btn-primary" data-toggle="modal" data-target="#LoginModel">Login <i class="fas fa-user d-none d-md-inline-block"></i></button>
-                            <img src="https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/ae.svg"  alt="">
+                            <img class="selectCountry" data-toggle="modal" data-target="#CountryModel" src="https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/ae.svg"  alt="">
                             <div class="lang">العربية</div>
                         </div>
                     </div>
@@ -313,6 +313,51 @@
         </div>
     </div>
     <!-- End Login Model-->
+    <!--Start Country Model -->
+    <div class="modal fade" id="CountryModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Select your country</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="Countries">
+                    <div class="country d-flex justify-content-between align-items-center">
+                        <span>United Arab Emirates</span>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="country d-flex justify-content-between align-items-center">
+                        <span>Qatar</span>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="country d-flex justify-content-between align-items-center">
+                        <span>Saudi Arabia</span>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="country d-flex justify-content-between align-items-center">
+                        <span>Bahrain</span>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="country d-flex justify-content-between align-items-center">
+                        <span>Oman</span>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="country d-flex justify-content-between align-items-center">
+                        <span>Kuwait</span>
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center align-items-center">
+                <button type="button" class=" btn btn-primary">Ok</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--End Country Model -->
     <!--Start Loading Page -->
     <div id="loading" >
         <img src='./images/preloadone.gif' alt="Loading"> 
