@@ -39,7 +39,7 @@
     <section class="Frequancy">
         <div class="container">
             <div class="selectAddress d-flex align-items-center flex-column wow fadeInUp " data-wow-delay=".2s">
-                <div class="d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalCenter"><h6 class="city"  >Emirate</h6><i class="fas fa-chevron-down"></i></div>
+                <div class="d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalCenter"><h6 class="city"  >Select Your Country</h6><i class="fas fa-chevron-down"></i></div>
                 <span class="Errors text-danger font-weight-bold">Please Choose City</span>
             </div>
             <h1 class="text-center wow fadeInUp " data-wow-delay=".3s">Sofa Cleaning </h1>
@@ -105,69 +105,321 @@
                                 </div>
                                 <div class="NRooms">
                                     <h6>Number of king/queen mattresses (AED 199 per unit)</h6>
-                                    <div class="ApartOpt">
+                                    <div class="select-box">
+                                        <div class="select-box__current" tabindex="1">
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked"/>
+                                            <p class="select-box__input-text">One</p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="1" value="2" name="Ben"/>
+                                            <p class="select-box__input-text">Two </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="2" value="3" name="Ben" />
+                                            <p class="select-box__input-text">Three </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="3" value="4" name="Ben" />
+                                            <p class="select-box__input-text">Four </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="4" value="5" name="Ben" />
+                                            <p class="select-box__input-text">Five </p>
+                                          </div>
+                                          <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+                                        </div>
+                                        <ul class="select-box__list">
+                                          <li>
+                                            <label class="select-box__option" for="0" aria-hidden="aria-hidden">One</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="1" aria-hidden="aria-hidden">Two</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="2" aria-hidden="aria-hidden">Three</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="3" aria-hidden="aria-hidden">Four</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="4" aria-hidden="aria-hidden">Five</label>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    <!-- <div class="ApartOpt">
                                         <span class="active">0</span>
                                         <span>1</span>
                                         <span>2</span>
                                         <span>3</span>
                                         <span>4</span>
                                         <span>5</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="NRooms">
                                     <h6>Number of chair/1-seater sofas (AED 50 per sofa)</h6>
-                                    <div class="ApartOpt">
+                                    <div class="select-box">
+                                        <div class="select-box__current" tabindex="1">
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="5" value="1" name="Chair" checked="checked"/>
+                                            <p class="select-box__input-text">One</p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="6" value="2" name="Chair"/>
+                                            <p class="select-box__input-text">Two </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="7" value="3" name="Chair" />
+                                            <p class="select-box__input-text">Three </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="8" value="4" name="Chair" />
+                                            <p class="select-box__input-text">Four </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="9" value="5" name="Chair" />
+                                            <p class="select-box__input-text">Five </p>
+                                          </div>
+                                          <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+                                        </div>
+                                        <ul class="select-box__list">
+                                          <li>
+                                            <label class="select-box__option" for="5" aria-hidden="aria-hidden">One</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="6" aria-hidden="aria-hidden">Two</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="7" aria-hidden="aria-hidden">Three</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="8" aria-hidden="aria-hidden">Four</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="9" aria-hidden="aria-hidden">Five</label>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    <!-- <div class="ApartOpt">
                                         <span class="active">0</span>
                                         <span>1</span>
                                         <span>2</span>
                                         <span>3</span>
                                         <span>4</span>
                                         <span>5</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="NRooms">
                                     <h6>Number of 2-seater sofas (AED 99 per sofa)</h6>
-                                    <div class="ApartOpt">
+                                    <div class="select-box">
+                                        <div class="select-box__current" tabindex="1">
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="10" value="1" name="Seater" checked="checked"/>
+                                            <p class="select-box__input-text">One</p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="11" value="2" name="Seater"/>
+                                            <p class="select-box__input-text">Two </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="12" value="3" name="Seater" />
+                                            <p class="select-box__input-text">Three </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="13" value="4" name="Seater" />
+                                            <p class="select-box__input-text">Four </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="14" value="5" name="Seater" />
+                                            <p class="select-box__input-text">Five </p>
+                                          </div>
+                                          <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+                                        </div>
+                                        <ul class="select-box__list">
+                                          <li>
+                                            <label class="select-box__option" for="10" aria-hidden="aria-hidden">One</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="11" aria-hidden="aria-hidden">Two</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="12" aria-hidden="aria-hidden">Three</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="13" aria-hidden="aria-hidden">Four</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="14" aria-hidden="aria-hidden">Five</label>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    <!-- <div class="ApartOpt">
                                         <span class="active">0</span>
                                         <span>1</span>
                                         <span>2</span>
                                         <span>3</span>
                                         <span>4</span>
                                         <span>5</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="NRooms">
                                     <h6>Number of 3-seater sofas (AED 149 per sofa)</h6>
-                                    <div class="ApartOpt">
+                                    <div class="select-box">
+                                        <div class="select-box__current" tabindex="1">
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="15" value="1" name="149" checked="checked"/>
+                                            <p class="select-box__input-text">One</p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="16" value="2" name="149"/>
+                                            <p class="select-box__input-text">Two </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="17" value="3" name="149" />
+                                            <p class="select-box__input-text">Three </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="18" value="4" name="149" />
+                                            <p class="select-box__input-text">Four </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="19" value="5" name="149" />
+                                            <p class="select-box__input-text">Five </p>
+                                          </div>
+                                          <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+                                        </div>
+                                        <ul class="select-box__list">
+                                          <li>
+                                            <label class="select-box__option" for="15" aria-hidden="aria-hidden">One</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="16" aria-hidden="aria-hidden">Two</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="17" aria-hidden="aria-hidden">Three</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="18" aria-hidden="aria-hidden">Four</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="19" aria-hidden="aria-hidden">Five</label>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    <!-- <div class="ApartOpt">
                                         <span class="active">0</span>
                                         <span>1</span>
                                         <span>2</span>
                                         <span>3</span>
                                         <span>4</span>
                                         <span>5</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="NRooms">
                                     <h6>Number of 4-seater sofas (AED 199 per sofa)</h6>
-                                    <div class="ApartOpt">
+                                    <div class="select-box">
+                                        <div class="select-box__current" tabindex="1">
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="20" value="1" name="199" checked="checked"/>
+                                            <p class="select-box__input-text">One</p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="21" value="2" name="199"/>
+                                            <p class="select-box__input-text">Two </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="22" value="3" name="199" />
+                                            <p class="select-box__input-text">Three </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="23" value="4" name="199" />
+                                            <p class="select-box__input-text">Four </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="24" value="5" name="199" />
+                                            <p class="select-box__input-text">Five </p>
+                                          </div>
+                                          <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+                                        </div>
+                                        <ul class="select-box__list">
+                                          <li>
+                                            <label class="select-box__option" for="20" aria-hidden="aria-hidden">One</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="21" aria-hidden="aria-hidden">Two</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="22" aria-hidden="aria-hidden">Three</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="23" aria-hidden="aria-hidden">Four</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="24" aria-hidden="aria-hidden">Five</label>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    <!-- <div class="ApartOpt">
                                         <span class="active">0</span>
                                         <span>1</span>
                                         <span>2</span>
                                         <span>3</span>
                                         <span>4</span>
                                         <span>5</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="NRooms">
                                     <h6>Number of 5-seater sofas (AED 249 per sofa)</h6>
-                                    <div class="ApartOpt">
+                                    <div class="select-box">
+                                        <div class="select-box__current" tabindex="1">
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="25" value="1" name="249" checked="checked"/>
+                                            <p class="select-box__input-text">One</p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="26" value="2" name="249"/>
+                                            <p class="select-box__input-text">Two </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="27" value="3" name="249" />
+                                            <p class="select-box__input-text">Three </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="28" value="4" name="249" />
+                                            <p class="select-box__input-text">Four </p>
+                                          </div>
+                                          <div class="select-box__value">
+                                            <input class="select-box__input" type="radio" id="29" value="5" name="249" />
+                                            <p class="select-box__input-text">Five </p>
+                                          </div>
+                                          <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+                                        </div>
+                                        <ul class="select-box__list">
+                                          <li>
+                                            <label class="select-box__option" for="25" aria-hidden="aria-hidden">One</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="26" aria-hidden="aria-hidden">Two</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="27" aria-hidden="aria-hidden">Three</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="28" aria-hidden="aria-hidden">Four</label>
+                                          </li>
+                                          <li>
+                                            <label class="select-box__option" for="29" aria-hidden="aria-hidden">Five</label>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    <!-- <div class="ApartOpt">
                                         <span class="active">0</span>
                                         <span>1</span>
                                         <span>2</span>
                                         <span>3</span>
                                         <span>4</span>
                                         <span>5</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="msg">
                                     <h6>Do you have any specific cleaning instructions?</h6>
@@ -498,7 +750,7 @@
                         <h6>YOUR MOBILE NUMBER</h6>
                         <div class="group">
                             <span>+971</span>
-                            <input id="PhoneNumber" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9" style="width: 80%;" type="number" placeholder="15 121 5879" required>
+                            <input id="PhoneNumber" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9" style="width: 80%;" type="number" placeholder="50 123 4567" required>
                         </div>
                         <span class="err text-danger">Please Enter Valid Number</span>
                     </div>

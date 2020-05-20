@@ -187,6 +187,12 @@ $('.Done').click(function(){
     }
 });
 
+//Select Box Function
+$('.select-box .select-box__current').click(function(){
+    $(this).parent().children('ul').slideToggle();
+});
+
+
 // Data Picker in Booking page
 $(".form_datetime").datetimepicker({
     format: "dd MM yyyy - HH:ii P",

@@ -115,21 +115,24 @@ $('.Details .inner .Back').click(function(){
 });
 
 //Carpet Numbers Function 
-$('.ApartOpt span').click(function(){
-    console.log($(this).data('value'));
-    for(let i = 0; i < $(this).data('value'); i++){
-        if($('.Size-Type .size').length < $(this).data('value') ){
+//Select Box Function
+$('.select-box .select-box__current').click(function(){
+    $(this).parent().children('ul').slideToggle();
+});
+$('.select-box__input').click(function(){
+    for(let i = 0; i < $(this).val() ; i++){
+        if($('.Size-Type .size').length < $(this).val() ){
             $('.Size-Type').append(`
             <div class="size d-flex justify-content-start align-items-center ">
-                <input type="number" placeholder="1. Curtain">
+                <input type="number" placeholder="1. Carpet">
                 <p class="m-0">X</p>
-                <input type="number" placeholder="1. Curtain">
+                <input type="number" placeholder="1. Carpet">
                 <p class="unit m-0">CM</p>
             </div>
-            <p class="Err text-danger font-weight-bold">Please Enter Curtain Size</p>
+            <p class="Err text-danger font-weight-bold">Please Enter Carpet Size</p>
             `);
         }else{
-            for(let i = $('.Size-Type .size').length ; i >= $(this).data('value') ; i--){
+            for(let i = $('.Size-Type .size').length ; i >= $(this).val() ; i--){
                 $(`.size:eq(${i})`).remove();
             }
         }

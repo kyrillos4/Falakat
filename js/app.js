@@ -1,6 +1,6 @@
 // awoul Carousel Script 
 $('.owl-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:10,
     nav:true,
     responsive:{
@@ -201,14 +201,10 @@ $('#LoginModel .continuebtn').click(function(){
 })
 
 // County Model 
-// $('.selectCountry').click(function(){
-    // for(let i = 0 ; i < $('#CountryModel .country').length ; i++){
-    //     $(`#CountryModel .country:eq(${i})`).click(function(){
-    //         $(`#CountryModel .country:eq(${i})`).last().show();
-    //         $(`#CountryModel .country:eq(${i})`).siblings().last().css('display' , 'none');
-    //     });
-    // }
-// });
+$('#CountryModel .country').click(function(){
+    $(this).children().last().show();
+    $(this).siblings().children('svg').hide();
+});
 
 //Payment Part Functions 
 $('.payment div').click(function(){
@@ -309,16 +305,45 @@ let Answers = [
     }
 })();
 
-// Data Picker in Booking page
-$(".form_datetime").datetimepicker({
-    format: "dd MM yyyy - HH:ii P",
-    showMeridian: true,
-    autoclose: true,
-    todayBtn: true,
-    startDate: new Date,
-    hoursDisabled: [0,1,2,3,4,5,6,7,19,20,21,22,23,24],
-    // minuteStep: 15
-    todayBtn: false,
+//Select Box Function
+$('.select-box .select-box__current').click(function(){
+    $(this).parent().children('ul').slideToggle();
 });
 
+// // Data Picker in Booking page
+// $(".form_datetime").datetimepicker({
+//     format: "dd MM yyyy - HH:ii P",
+//     showMeridian: true,
+//     autoclose: true,
+//     todayBtn: true,
+//     startDate: new Date,
+//     hoursDisabled: [0,1,2,3,4,5,6,7,19,20,21,22,23,24],
+//     // minuteStep: 15
+//     todayBtn: false,
+// });
 
+
+const date = new Date();
+console.log(date.getDate());
+console.log(date.getDay());
+var day = 0;
+let weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+$(document).ready(function(){
+    for(let i = 0; i < 15 ; i++){
+        let NumDays = date.getDate() + i;
+        let DayName = date.getDay() + day;
+        if(NumDays > 30){
+            break;
+        }
+        if(DayName > 6){
+            day = 0 ;
+        }
+        $('.Days').append(`
+            <div class="Day">
+                <p>${weekday[DayName]}</p>
+                <span>${NumDays}</span>
+            </div>
+        `);
+        day ++;
+    }
+});

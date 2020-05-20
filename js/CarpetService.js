@@ -116,10 +116,17 @@ $('.Details .inner .Back').click(function(){
 });
 
 //Carpet Numbers Function 
-$('.ApartOpt span').click(function(){
-    console.log($(this).data('value'));
-    for(let i = 0; i < $(this).data('value'); i++){
-        if($('.Size-Type .size').length < $(this).data('value') ){
+//Select Box Function
+$('.select-box .select-box__current').click(function(){
+    $(this).parent().children('ul').slideToggle();
+});
+$('.select-box__input').click(function(){
+    // for(let i =0; i < $('.select-box__input').length ; i++ ){
+    //     $(`.select-box__input:eq(${i})`).attr('checked' , false);
+    // }
+    // $(this).attr('checked' , true);
+    for(let i = 0; i < $(this).val() ; i++){
+        if($('.Size-Type .size').length < $(this).val() ){
             $('.Size-Type').append(`
             <div class="size d-flex justify-content-start align-items-center ">
                 <input type="number" placeholder="1. Carpet">
@@ -130,12 +137,12 @@ $('.ApartOpt span').click(function(){
             <p class="Err text-danger font-weight-bold">Please Enter Carpet Size</p>
             `);
         }else{
-            for(let i = $('.Size-Type .size').length ; i >= $(this).data('value') ; i--){
+            for(let i = $('.Size-Type .size').length ; i >= $(this).val() ; i--){
                 $(`.size:eq(${i})`).remove();
             }
         }
     }
-});
+})
 
 //Map Model
 //Map Continue Button 
@@ -224,6 +231,8 @@ $('.Done').click(function(){
         $('.visaDetails input:eq(3)').next('span').show().text('Please Enter Valid Name');
     }
 });
+
+
 
 
 // Data Picker in Booking page
