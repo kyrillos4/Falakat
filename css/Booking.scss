@@ -402,20 +402,20 @@
                       }
                 }
             }
-            .date{
-                input{
-                    padding: 5px 15px;
-                    border:1px solid #eee;
-                    margin:15px 0 ;
-                    width:450px;
-                    @media all and (max-width:769px) {
-                        width:220px;
-                    } 
-                }
-                @media all and (max-width:769px) {
-                  margin-bottom:40px;
-                }
-            }
+            // .date{
+            //     input{
+            //         padding: 5px 15px;
+            //         border:1px solid #eee;
+            //         margin:15px 0 ;
+            //         width:450px;
+            //         @media all and (max-width:769px) {
+            //             width:220px;
+            //         } 
+            //     }
+            //     @media all and (max-width:769px) {
+            //       margin-bottom:40px;
+            //     }
+            // }
             .payment{
               margin:10px;
               padding:30px 0;
@@ -477,6 +477,9 @@
             @media all and (max-width:769px) {
               padding: 10px 0px;
             }
+        }
+        .HDate{
+          min-height: 460px;
         }
         button{
             @include Button();

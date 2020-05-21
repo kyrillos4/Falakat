@@ -46,8 +46,8 @@ $('.Details .inner .Next:eq(0)').click(function(){
         AnswersDry[0] = {"City" : $('.city').data('class')};
         //fadeout err message of city        
         $('.city').parent().next().fadeOut();
-        if($('.date input').val()){
-            AnswersDry[1] = {'Date & Time' : $('.date input').val()}
+        if(DateAnswers[0] && DateAnswers[1] && DateAnswers[2] ){
+            // AnswersDry[1] = {'Date & Time' : $('.date input').val()}
             // data-toggle="modal" data-target="#MapModel"
             $('.Errors:eq(1)').css('display' , 'none');
             if(login === false){
@@ -88,8 +88,8 @@ $('#MapContinue').click(function(){
         $('.DetailsBlock span').fadeOut();
         AnswersDry[4] = {'Address' : $('.DetailsBlock input:eq(0)').val()}
         $('#MapContinue').attr('data-dismiss' , 'modal');
-        $('.DateBlock').parent().fadeOut(function(){
-            $('.DateBlock').parent().next().fadeIn();
+        $('.Date').fadeOut(function(){
+            $('.Date').next().fadeIn();
             $('.stepTwo').removeClass('--current').addClass('--completed');
             $('.stepTwo').next().removeClass('--pending').addClass('--current');
         });
@@ -167,14 +167,98 @@ $('.Done').click(function(){
     }
 });
 
-// Data Picker in Booking page
-$(".form_datetime").datetimepicker({
-    format: "dd MM yyyy - HH:ii P",
-    showMeridian: true,
-    autoclose: true,
-    todayBtn: true,
-    startDate: new Date,
-    hoursDisabled: [0,1,2,3,4,5,6,7,19,20,21,22,23,24],
-    // minuteStep: 15
-    todayBtn: false,
+// // Data Picker in Booking page
+// $(".form_datetime").datetimepicker({
+//     format: "dd MM yyyy - HH:ii P",
+//     showMeridian: true,
+//     autoclose: true,
+//     todayBtn: true,
+//     startDate: new Date,
+//     hoursDisabled: [0,1,2,3,4,5,6,7,19,20,21,22,23,24],
+//     // minuteStep: 15
+//     todayBtn: false,
+// });
+const date = new Date();
+var day = 0;
+var DayOfMonth = 1;
+let weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+let Time = date.getHours() + '.' + date.getMinutes();
+let HourSelected ;
+let DateAnswers = [];
+
+$(document).ready(function(){
+    for(let i = 0; i < 12 ; i++){
+        let NumDays = date.getDate() + i;
+        let DayName = date.getDay() + i;
+        if(NumDays > 31){
+            NumDays = DayOfMonth;
+            DayOfMonth ++;
+        }
+        if(DayName > 6){
+            DayName = day;
+            day ++;
+        }
+        if(day > 6){
+            day=0;
+        }
+        //append Days 
+        $('.Days').append(`
+            <div class="Day">
+                <p>${weekday[DayName]}</p>
+                <span class='Nday'>${NumDays}</span>
+            </div>
+        `);
+        //check Time if biger Than 18 (Workign Hours ) will dissabled this day
+        if(Number(Time) > 18.30){
+            $('Days .Day:eq(0)').addClass('disabled');
+        }
+    }
+    //check available Hours 
+    for(let i =0; i < $('.Hours p').length ; i++){
+        if($(`.Hours p:eq(${i})`).data('value') < Time){
+            $(`.Hours p:eq(${i})`).addClass('disabled').prevAll().addClass('disabled');
+        }
+    }
+    //Function Date Selection
+    //Fun To Select Day 
+    $('.Days .Day span').click(function(){
+        for(let i =0; i < $('.Days .Day span').length; i++){
+            $(`.Days .Day span:eq(${i})`).removeClass('active');
+            
+        }
+        $(this).addClass('active');
+        //check it disabled of not 
+        if (!$(this).hasClass("disabled")) {
+            DateAnswers[0] = {'Day' : $(this).text()}
+        }
+    });
+    //Fun to Select Time
+    $('.Hours p').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        //check it disabled of not 
+        if (!$(this).hasClass("disabled")) {
+            DateAnswers[1] = {'Time' : $(this).text()}
+        }
+        // Function Cleaners Hours 
+        HourSelected = $(this).data('value');
+        for(let i = 0; i < $('.StayNum span').length ; i++ ){
+            $(`.StayNum span:eq(${i})`).data('value') > Math.ceil(19 - HourSelected)  ? $(`.StayNum span:eq(${i})`).hide() : $(`.StayNum span:eq(${i})`).show();
+        }
+    });
+    //active Cleaner Hours 
+    $('.StayNum span').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        DateAnswers[2] = {'Cleaners Hours ' : $(this).data('value')}
+    });
+});
+
+//Arrow Functions  to Scroll Date
+let scroll = 0;
+$('.rightAr').click(function(){
+    scroll += 50;
+    $(this).parent().scrollLeft(scroll);
+});
+$('.leftAr').click(function(){
+    scroll -= 50;
+    $(this).parent().scrollLeft(scroll);
 });

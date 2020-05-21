@@ -293,6 +293,7 @@ footer{
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
+    height:5px;
   }
   
   /* Track */
@@ -440,13 +441,17 @@ footer{
   }
 
 
+@mixin Date {
+    @include FlexBox();
+    justify-content: flex-start;
+    overflow:hidden;
+    padding: 15px 0;
+}
 //Date Style
 .Date{
     width:100%;
-    .Days , .Hours{
-        @include FlexBox();
-        justify-content: flex-start;
-        overflow:scroll;
+    .Days{
+        @include Date();
         .Day{
             text-align:center;
             p{margin-bottom:2px;}
@@ -456,10 +461,48 @@ footer{
         }
     }
     .Hours{
+        @include Date();
         p{
             @include SDATE();
-            width:100px;
-            border-radius: 10px;
+            padding: 5px 30px;
+            border-radius: 5px;
         }
+    }
+    .StayTime{
+        @include Date();
+        flex-direction: column;
+        align-items: flex-start;
+        .StayNum{
+            text-align:center;
+            @include FlexBox();
+            justify-content: flex-start;
+            span{
+                @include SDATE();
+            }
+        }
+    }
+    .disabled{
+        background: #999 !important;
+        color: #ddd !important;
+        cursor:no-drop !important;
+        &:hover{
+            background: #999 !important;
+            color: #ddd !important;
+        }
+    }
+    .active{
+        background: $Sky;
+        color:$white;
+        transition: all .4s ease-in-out;
+    }
+    .rightAr{
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+    .leftAr{
+        position: absolute;
+        left: 0;
+        cursor: pointer;
     }
 }

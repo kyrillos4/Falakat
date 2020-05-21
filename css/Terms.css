@@ -394,6 +394,7 @@ footer .bottomFooter .right .colored:hover {
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* Track */
@@ -580,7 +581,7 @@ footer .bottomFooter .right .colored:hover {
   width: 100%;
 }
 
-.Date .Days, .Date .Hours {
+.Date .Days {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,18 +594,19 @@ footer .bottomFooter .right .colored:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  overflow: scroll;
+  overflow: hidden;
+  padding: 15px 0;
 }
 
-.Date .Days .Day, .Date .Hours .Day {
+.Date .Days .Day {
   text-align: center;
 }
 
-.Date .Days .Day p, .Date .Hours .Day p {
+.Date .Days .Day p {
   margin-bottom: 2px;
 }
 
-.Date .Days .Day span, .Date .Hours .Day span {
+.Date .Days .Day span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,11 +626,28 @@ footer .bottomFooter .right .colored:hover {
   margin: 0 5px;
 }
 
-.Date .Days .Day span:hover, .Date .Hours .Day span:hover {
+.Date .Days .Day span:hover {
   background: #2eb3b7;
   color: #fff;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+.Date .Hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
+  padding: 15px 0;
 }
 
 .Date .Hours p {
@@ -649,8 +668,8 @@ footer .bottomFooter .right .colored:hover {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   margin: 0 5px;
-  width: 100px;
-  border-radius: 10px;
+  padding: 5px 30px;
+  border-radius: 5px;
 }
 
 .Date .Hours p:hover {
@@ -658,6 +677,103 @@ footer .bottomFooter .right .colored:hover {
   color: #fff;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+.Date .StayTime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
+  padding: 15px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Date .StayTime .StayNum {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.Date .StayTime .StayNum span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  cursor: pointer;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  margin: 0 5px;
+}
+
+.Date .StayTime .StayNum span:hover {
+  background: #2eb3b7;
+  color: #fff;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.Date .disabled {
+  background: #999 !important;
+  color: #ddd !important;
+  cursor: no-drop !important;
+}
+
+.Date .disabled:hover {
+  background: #999 !important;
+  color: #ddd !important;
+}
+
+.Date .active {
+  background: #2eb3b7;
+  color: #fff;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.Date .rightAr {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.Date .leftAr {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
 }
 
 .Terms {
