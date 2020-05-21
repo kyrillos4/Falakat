@@ -781,7 +781,7 @@ footer .bottomFooter .right .colored:hover {
   background: url("https://justcdn.s3.eu-central-1.amazonaws.com/prod/assets/static/hero-bg.webp");
   background-size: cover;
   background-position: center;
-  height: 650px;
+  height: 500px;
   position: relative;
   /*Covid div*/
   /*upper Nav*/
@@ -892,10 +892,12 @@ footer .bottomFooter .right .colored:hover {
 /*********************Start Carousel Style*******************/
 .carousel {
   padding: 50px 0;
+  padding-top: 0;
 }
 
 .carousel .title {
-  margin: 30px 0;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .carousel .owl-carousel {
